@@ -1,0 +1,17 @@
+Approximate 95% confidence intervals
+
+ Fixed effects:
+                 lower       est.     upper
+(Intercept) 15.2471623 16.7611111 18.275060
+age          0.5210373  0.6601852  0.799333
+
+ Random Effects:
+  Level: Subject 
+                           lower       est.     upper
+sd((Intercept))       0.83714443  2.1940995 5.7505878
+sd(age)               0.09288883  0.2149244 0.4972882
+cor((Intercept),age) -0.94233515 -0.5814877 0.4045557
+
+ Within-group standard error:
+   lower     est.    upper 
+1.084927 1.310040 1.581861 

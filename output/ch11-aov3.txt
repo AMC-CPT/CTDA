@@ -1,0 +1,10 @@
+Response : weight
+                   Df  Sum Sq Mean Sq F value  Pr(>F)  
+MODEL               7  82.000 11.7143  2.0918 0.13995  
+ treatment          2  12.471  6.2353  1.1134 0.36595  
+ variety            3  34.872 11.6240  2.0757 0.16719  
+ treatment:variety  2  34.714 17.3571  3.0995 0.08965 .
+RESIDUALS          10  56.000  5.6000                  
+CORRECTED TOTAL    17 138.000                          
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1

@@ -1,0 +1,4 @@
+sample_mean          np 
+     5.9973      6.0000 
+sample_var    np(1-p) 
+  4.230615   4.200000 

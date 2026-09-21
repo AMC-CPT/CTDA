@@ -1,0 +1,15 @@
+plot(0, 0, type = "n", xlim = c(-1, 1), ylim = c(-1, 1), asp = 1, xlab = "", ylab = "")
+rs <- seq(0, 1, length.out = 11)
+th <- seq(0, 2 * pi, length.out = 41)
+xs <- rep(NA, 10 * 40); ys <- xs
+i <- 1:(10 * 40)
+j <- ceiling(i / 40) + 1
+k <- rep(0:40, 10)
+xs[i] <- rs[j] * cos(th[k]); ys[i] <- rs[j] * sin(th[k])
+for (i in 1:20) abline(a = 0, b = tan(th[i]), col = "#123669")
+points(xs, ys, pch = 20, col = "#123669")
+xs <- rep(seq(-1.2, 1.2, length.out = 25), 25)
+ys <- sort(rep(seq(-1.2, 1.2, length.out = 25), 25))
+points(xs, ys, pch = 20)
+th <- seq(0, 2 * pi, length.out = 101)
+for (r in (1:15)/10) lines(r * cos(th), r * sin(th), lwd = 2, col = "#123669")

@@ -1,0 +1,6 @@
+[1] 0.9745628
+[1] 0.9236884
+           Sum Sq Df Mean Sq F value F crit Pr(>F)
+Regression    613  2   306.5  19.156  199.5 0.1595
+Error          16  1    16.0                      
+Total         629  3                              

@@ -1,0 +1,4 @@
+Call: survfit(formula = Surv(stime, status == 1) ~ 1, data = VA)
+
+       n events median 0.95LCL 0.95UCL
+[1,] 137    128     80      52     105

@@ -1,0 +1,5 @@
+                  reStruct.Subject1 reStruct.Subject2 reStruct.Subject3      lSigma
+reStruct.Subject1         18.149813          1.603962         7.2373992   8.3644875
+reStruct.Subject2          1.603962         27.740185         9.8854759   6.8342943
+reStruct.Subject3          7.237399          9.885476         6.9591758   0.6109788
+lSigma                     8.364487          6.834294         0.6109788 136.5460987

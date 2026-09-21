@@ -1,0 +1,18 @@
+Call:
+flexsurvreg(formula = Surv(TIME, DV) ~ SEX, data = d1, dist = "gompertz")
+
+Estimates: 
+       data mean  est       L95%      U95%      se        exp(est)
+shape        NA    0.02868   0.01780   0.03957   0.00555        NA
+rate         NA    0.00422   0.00204   0.00874   0.00157        NA
+SEX     0.48000    0.35980  -0.21074   0.93033   0.29109   1.43304
+       L95%      U95%    
+shape        NA        NA
+rate         NA        NA
+SEX     0.80999   2.53535
+
+N = 50,  Events: 48,  Censored: 2
+Total time at risk: 2755
+Log-likelihood = -228.9019, df = 3
+AIC = 463.8038
+

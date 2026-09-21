@@ -1,0 +1,7 @@
+score <- c(0, 0.5, 1.5, 4, 7)         # 각 범주의 점수(구간 중앙값)
+x <- rep(score, each = 2)
+y <- rep(c(0, 1), length(score))
+w <- c(17066, 48, 14464, 38, 788, 5, 126, 1, 37, 1)
+d2ca <- data.frame(x, y, w)
+r2ca <- glm(y ~ x, d2ca, weights = w, family = "binomial")
+summary(r2ca)

@@ -1,0 +1,12 @@
+
+     Two-sample t test power calculation 
+
+              n = 10
+          delta = 2
+             sd = 2
+      sig.level = 0.05
+          power = 0.5619846
+    alternative = two.sided
+
+NOTE: n is number in *each* group
+

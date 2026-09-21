@@ -1,0 +1,8 @@
+   PE  LL  UL
+1 270 212 310
+2 426 348 550
+Call: survfit(formula = Surv(time, status == 2) ~ sex, data = lung)
+
+        n events median 0.95LCL 0.95UCL
+sex=1 138    112    270     212     310
+sex=2  90     53    426     348     550

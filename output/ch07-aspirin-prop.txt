@@ -1,0 +1,13 @@
+
+	2-sample test for equality of proportions with continuity
+	correction
+
+data:  c(104, 189) out of c(11037, 11034)
+X-squared = 24.429, df = 1, p-value = 7.71e-07
+alternative hypothesis: two.sided
+95 percent confidence interval:
+ -0.010814914 -0.004597134
+sample estimates:
+    prop 1     prop 2 
+0.00942285 0.01712887 
+

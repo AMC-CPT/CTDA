@@ -1,0 +1,25 @@
+Call:
+multinom(formula = Y ~ sexN + ageN, data = d8, weights = Count, 
+    trace = FALSE)
+
+Coefficients:
+       (Intercept)       sexN      ageN
+1-yes   -0.5019284 -0.3889719 0.8303865
+2-very  -1.0923016 -0.8130325 1.5214495
+
+Std. Errors:
+       (Intercept)      sexN      ageN
+1-yes    0.2696958 0.2991332 0.1946359
+2-very   0.3085171 0.3211054 0.2114579
+
+Residual Deviance: 582.1003 
+AIC: 594.1003 
+Likelihood ratio tests of Multinomial Models
+
+Response: Y
+                   Model Resid. df Resid. Dev   Test    Df LR stat.
+1            sexN + ageN        30   582.1003                      
+2 sexN + as.factor(ageN)        28   580.7022 1 vs 2     2 1.398123
+    Pr(Chi)
+1          
+2 0.4970516

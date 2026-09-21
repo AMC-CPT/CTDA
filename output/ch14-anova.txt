@@ -1,0 +1,17 @@
+            numDF denDF   F-value p-value
+(Intercept)     1    80 3156.0381  <.0001
+age             1    80   87.4973  <.0001
+            numDF denDF   F-value p-value
+(Intercept)     1    80 3096.4871  <.0001
+age             1    80   85.8464  <.0001
+
+Error: age:Subject
+          Df Sum Sq Mean Sq F value  Pr(>F)   
+age        1  235.4   235.4   11.71 0.00207 **
+Residuals 26  522.7    20.1                   
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Error: Within
+          Df Sum Sq Mean Sq F value Pr(>F)
+Residuals 80  159.6   1.996               

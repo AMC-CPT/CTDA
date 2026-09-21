@@ -1,0 +1,18 @@
+$age
+Error: 1*age:Subject + 0*MSE
+      Df  Sum Sq Mean Sq F value    Pr(>F)    
+age    1 235.356 235.356  85.846 1.013e-09 ***
+Error 26  71.281   2.742                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Response : distance
+                 Df Sum Sq Mean Sq  F value    Pr(>F)    
+MODEL            53 825.02  15.566   9.0702 6.573e-14 ***
+ age              1 235.36 235.356 137.1376 2.220e-16 ***
+ Subject         26  66.97   2.576   1.5008   0.10395    
+ age:Subject     26  71.28   2.742   1.5975   0.07345 .  
+RESIDUALS        54  92.67   1.716                       
+CORRECTED TOTAL 107 917.69                               
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1

@@ -1,0 +1,19 @@
+     sex   age       response frequency
+1  women 18-23      no/little        26
+2  women 18-23      important        12
+3  women 18-23 very important         7
+4  women 24-40      no/little         9
+5  women 24-40      important        21
+6  women 24-40 very important        15
+7  women  > 40      no/little         5
+8  women  > 40      important        14
+9  women  > 40 very important        41
+10   men 18-23      no/little        40
+11   men 18-23      important        17
+12   men 18-23 very important         8
+13   men 24-40      no/little        17
+14   men 24-40      important        15
+15   men 24-40 very important        12
+16   men  > 40      no/little         8
+17   men  > 40      important        15
+18   men  > 40 very important        18

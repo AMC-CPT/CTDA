@@ -1,0 +1,53 @@
+                                    L1   L2 L3   L4 L5 L6 L7 L8 L9
+(Intercept)                          1  0.0  0  0.0  0  0  0  0  0
+TypeQuebec                           0  1.0  0  0.0  0  0  0  0  0
+TypeMississippi                      0 -1.0  0  0.0  0  0  0  0  0
+Treatmentnonchilled                  0  0.0  0  1.0  0  0  0  0  0
+Treatmentchilled                     0  0.0  0 -1.0  0  0  0  0  0
+TypeQuebec:Treatmentchilled          0  0.5  0 -0.5  0  1  0  0  0
+TypeQuebec:Treatmentnonchilled       0  0.5  0  0.5  0 -1  0  0  0
+TypeMississippi:Treatmentchilled     0 -0.5  0 -0.5  0 -1  0  0  0
+TypeMississippi:Treatmentnonchilled  0 -0.5  0  0.5  0  1  0  0  0
+  Df   Sum Sq  Mean Sq  F value       Pr(>F)
+1  1 3582.646 3582.646 59.77216 2.905065e-11
+  Df  Sum Sq Mean Sq  F value       Pr(>F)
+1  1 1118.29 1118.29 18.65733 4.505622e-05
+  Df   Sum Sq  Mean Sq  F value    Pr(>F)
+1  1 162.0548 162.0548 2.703691 0.1040902
+$ANOVA
+Response : uptake
+                Df Sum Sq Mean Sq F value    Pr(>F)    
+MODEL            3 4844.6 1614.87  26.942 4.208e-12 ***
+RESIDUALS       79 4735.1   59.94                      
+CORRECTED TOTAL 82 9579.7                              
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+$Fitness
+ Root MSE uptake Mean Coef Var  R-square  Adj R-sq
+ 7.741987    27.34819 28.30895 0.5057134 0.4869431
+
+$`Type I`
+               Df Sum Sq Mean Sq F value    Pr(>F)    
+Type            1 3553.5  3553.5 59.2866 3.344e-11 ***
+Treatment       1 1129.0  1129.0 18.8360 4.177e-05 ***
+Type:Treatment  1  162.1   162.1  2.7037    0.1041    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+$`Type II`
+               Df Sum Sq Mean Sq F value    Pr(>F)    
+Type            1 3602.0  3602.0 60.0956 2.646e-11 ***
+Treatment       1 1129.0  1129.0 18.8360 4.177e-05 ***
+Type:Treatment  1  162.1   162.1  2.7037    0.1041    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+$`Type III`
+               Df Sum Sq Mean Sq F value    Pr(>F)    
+Type            1 3582.6  3582.6 59.7722 2.905e-11 ***
+Treatment       1 1118.3  1118.3 18.6573 4.506e-05 ***
+Type:Treatment  1  162.1   162.1  2.7037    0.1041    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+

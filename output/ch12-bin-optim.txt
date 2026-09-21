@@ -1,0 +1,23 @@
+$par
+[1] -60.71753  34.27037
+
+$value
+[1] 18.71513
+
+$counts
+function gradient 
+      20       20 
+
+$convergence
+[1] 0
+
+$message
+[1] "CONVERGENCE: REL_REDUCTION_OF_F <= FACTR*EPSMCH"
+
+$hessian
+          [,1]     [,2]
+[1,]  58.48413 104.0104
+[2,] 104.01040 185.0940
+
+[1] -18.71513
+[1] -11.71993  11.76811

@@ -1,0 +1,28 @@
+
+Call:
+lm(formula = y ~ x1 + x2, data = d2)
+
+Residuals:
+ 1  2  3  4 
+ 2 -2 -2  2 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)   23.667     15.173   1.560    0.363
+x1             2.667      1.491   1.789    0.325
+x2             3.167      1.491   2.124    0.280
+
+Residual standard error: 4 on 1 degrees of freedom
+Multiple R-squared:  0.9746,	Adjusted R-squared:  0.9237 
+F-statistic: 19.16 on 2 and 1 DF,  p-value: 0.1595
+
+  fit      lwr      upr
+1  58 13.98442 102.0156
+2  76 31.98442 120.0156
+3  75 30.98442 119.0156
+4  93 48.98442 137.0156
+  fit       lwr      upr
+1  58 -9.234916 125.2349
+2  76  8.765084 143.2349
+3  75  7.765084 142.2349
+4  93 25.765084 160.2349

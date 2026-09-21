@@ -1,0 +1,8 @@
+Cochran-Mantel-Haenszel Statistics 
+
+                 AltHypothesis   Chisq Df     Prob
+cor        Nonzero correlation  6.5699  1 0.010372
+rmeans  Row mean scores differ 12.0817  4 0.016754
+cmeans  Col mean scores differ  6.5699  1 0.010372
+general    General association 12.0817  4 0.016754
+

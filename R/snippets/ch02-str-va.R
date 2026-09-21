@@ -1,0 +1,2 @@
+library(MASS)
+str(VA)

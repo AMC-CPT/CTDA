@@ -1,0 +1,52 @@
+Call:
+survdiff(formula = Surv(y, Status) ~ x, data = d4)
+
+      N Observed Expected (O-E)^2/E (O-E)^2/V
+x=Q0 60       39     30.9   2.09809   3.90069
+x=Q1 20       13     10.4   0.62474   0.73907
+x=Q2 20       12     11.7   0.00658   0.00797
+x=Q3 20        4     14.9   7.96411  10.31731
+
+ Chisq= 10.8  on 3 degrees of freedom, p= 0.01 
+Call:
+coxph(formula = Surv(y, Status) ~ x, data = d4)
+
+  n= 120, number of events= 68 
+
+       coef exp(coef) se(coef)      z Pr(>|z|)   
+xQ1 -0.0180    0.9822   0.3208 -0.056  0.95525   
+xQ2 -0.2165    0.8054   0.3312 -0.654  0.51337   
+xQ3 -1.5610    0.2099   0.5266 -2.964  0.00304 **
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+    exp(coef) exp(-coef) lower .95 upper .95
+xQ1    0.9822      1.018   0.52375    1.8418
+xQ2    0.8054      1.242   0.42079    1.5414
+xQ3    0.2099      4.764   0.07478    0.5893
+
+Concordance= 0.589  (se = 0.032 )
+Likelihood ratio test= 13.93  on 3 df,   p=0.003
+Wald test            = 9.05  on 3 df,   p=0.03
+Score (logrank) test = 10.83  on 3 df,   p=0.01
+
+       chisq df    p
+x      0.537  3 0.91
+GLOBAL 0.537  3 0.91
+
+Call:
+survreg(formula = Surv(y, Status) ~ x, data = d4, dist = "exponential")
+             Value Std. Error    z       p
+(Intercept) 1.0868     0.1601 6.79 1.1e-11
+xQ1         0.0435     0.3203 0.14 0.89195
+xQ2         0.3320     0.3301 1.01 0.31454
+xQ3         1.8065     0.5250 3.44 0.00058
+
+Scale fixed at 1 
+
+Exponential distribution
+Loglik(model)= -153.7   Loglik(intercept only)= -163.7
+	Chisq= 19.99 on 3 degrees of freedom, p= 0.00017 
+Number of Newton-Raphson Iterations: 5 
+n= 120 
+

@@ -1,0 +1,12 @@
+         nAll           nNA       nFinite          Mean      Variance 
+  48.00000000    0.00000000   48.00000000    2.40000000    0.30425532 
+           SD            CV           SEM       LowerCL       UpperCL 
+   0.55159344   22.98305985    0.07961565    2.23983396    2.56016604 
+  TrimmedMean           Min            Q1        Median            Q3 
+   2.39318182    1.40000000    2.00000000    2.30000000    2.80000000 
+          Max         Range           IQR           MAD         VarLL 
+   3.50000000    2.10000000    0.80000000    0.59304000    0.21085024 
+        VarUL      Skewness    SkewnessSE      Kurtosis    KurtosisSE 
+   0.47736369    0.29289091    0.34314931   -0.69371455    0.67439742 
+GeometricMean   GeometricCV 
+   2.33783336   23.63750919 

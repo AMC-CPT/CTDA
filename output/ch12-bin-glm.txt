@@ -1,0 +1,20 @@
+
+Call:
+glm(formula = y/n ~ x, family = "binomial", data = beetle, weights = n)
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -60.717      5.181  -11.72   <2e-16 ***
+x             34.270      2.912   11.77   <2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 284.202  on 7  degrees of freedom
+Residual deviance:  11.232  on 6  degrees of freedom
+AIC: 41.43
+
+Number of Fisher Scoring iterations: 4
+
+'log Lik.' -18.71513 (df=2)

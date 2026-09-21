@@ -1,0 +1,4 @@
+   GMR  lower  upper 
+1.0222 0.9201 1.1356 
+  BE 
+TRUE 

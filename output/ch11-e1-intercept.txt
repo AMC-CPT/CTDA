@@ -1,0 +1,2 @@
+  Df   Sum Sq  Mean Sq  F value Pr(>F)
+1  1 62077.66 62077.66 1014.095      0

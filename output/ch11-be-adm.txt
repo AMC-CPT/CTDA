@@ -1,0 +1,72 @@
+$ANOVA
+Response : log(CMAX)
+                Df  Sum Sq Mean Sq F value    Pr(>F)    
+MODEL           48 23.1924 0.48317  5.6278 4.395e-08 ***
+RESIDUALS       42  3.6059 0.08585                      
+CORRECTED TOTAL 90 26.7983                              
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+$Fitness
+  Root MSE log(CMAX) Mean Coef Var  R-square  Adj R-sq
+ 0.2930098       6.071036 4.826355 0.8654428 0.7116631
+
+$`Type I`
+             Df  Sum Sq Mean Sq F value    Pr(>F)    
+ADM           2  0.1768 0.08839  1.0296  0.365994    
+ADM:SEQ       3  1.4592 0.48641  5.6655  0.002369 ** 
+ADM:SEQ:SUBJ 41 21.4489 0.52314  6.0934 2.233e-08 ***
+PRD           1  0.0969 0.09686  1.1281  0.294242    
+TRT           1  0.0106 0.01057  0.1231  0.727410    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+$`Type II`
+             Df  Sum Sq Mean Sq F value    Pr(>F)    
+ADM           2  0.1757 0.08783  1.0230  0.368290    
+ADM:SEQ       3  1.4636 0.48785  5.6823  0.002329 ** 
+ADM:SEQ:SUBJ 41 21.5279 0.52507  6.1158 2.111e-08 ***
+PRD           1  0.0996 0.09958  1.1599  0.287632    
+TRT           1  0.0106 0.01057  0.1231  0.727410    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+$`Type III`
+             Df  Sum Sq Mean Sq F value    Pr(>F)    
+ADM           2  0.1440 0.07201  0.8387   0.43936    
+ADM:SEQ       3  0.6899 0.22997  2.6786   0.05916 .  
+ADM:SEQ:SUBJ 41 21.5279 0.52507  6.1158 2.111e-08 ***
+PRD           1  0.0996 0.09958  1.1599   0.28763    
+TRT           1  0.0106 0.01057  0.1231   0.72741    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+$ADM
+Error: 0.854*ADM:SEQ + 0.1159*ADM:SEQ:SUBJ + 0.0302*MSE
+          Df  Sum Sq Mean Sq F value Pr(>F)
+ADM   2.0000 0.14402 0.07201  0.2772 0.7684
+Error 5.2144 1.35482 0.25982               
+
+$`ADM:SEQ`
+Error: 0.9183*ADM:SEQ:SUBJ + 0.0817*MSE
+            Df  Sum Sq Mean Sq F value Pr(>F)
+ADM:SEQ  3.000  0.6899 0.22997  0.4701 0.7047
+Error   42.192 20.6407 0.48921               
+
+$`The Rest Terms`
+             Df  Sum Sq Mean Sq F value    Pr(>F)    
+PRD           1  0.0996 0.09958  1.1599    0.2876    
+TRT           1  0.0106 0.01057  0.1231    0.7274    
+ADM:SEQ:SUBJ 41 21.5279 0.52507  6.1158 2.111e-08 ***
+RESIDUALS    42  3.6059 0.08585                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+$EMS
+                 ADM PRD TRT ADM:SEQ ADM:SEQ:SUBJ eps
+ADM          24.9096         12.4611       1.7427   1
+PRD                    Q                            1
+TRT                        Q                        1
+ADM:SEQ                      14.5923        1.778   1
+ADM:SEQ:SUBJ                               1.9361   1
+

@@ -1,0 +1,2 @@
+library(psych)
+describe(lh)

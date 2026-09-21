@@ -1,0 +1,12 @@
+
+	One Sample t-test
+
+data:  lh
+t = -2.5121, df = 47, p-value = 0.01549
+alternative hypothesis: true mean is not equal to 2.6
+95 percent confidence interval:
+ 2.239834 2.560166
+sample estimates:
+mean of x 
+      2.4 
+

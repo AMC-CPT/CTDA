@@ -1,0 +1,27 @@
+Linear mixed-effects model fit by maximum likelihood
+  Data: Orthodont 
+       AIC      BIC    logLik
+  451.2116 467.3044 -219.6058
+
+Random effects:
+ Formula: ~age | Subject
+ Structure: General positive-definite, Log-Cholesky parametrization
+            StdDev    Corr  
+(Intercept) 2.1940995 (Intr)
+age         0.2149244 -0.581
+Residual    1.3100400       
+
+Fixed effects:  distance ~ age 
+                Value Std.Error DF   t-value p-value
+(Intercept) 16.761111 0.7678975 80 21.827278       0
+age          0.660185 0.0705779 80  9.353997       0
+ Correlation: 
+    (Intr)
+age -0.848
+
+Standardized Within-Group Residuals:
+         Min           Q1          Med           Q3          Max 
+-3.305969367 -0.487429612  0.007597968  0.482237078  3.922789708 
+
+Number of Observations: 108
+Number of Groups: 27 

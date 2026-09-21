@@ -1,0 +1,12 @@
+
+	Shapiro-Wilk normality test
+
+data:  lh
+W = 0.97077, p-value = 0.2714
+
+
+	Shapiro-Wilk normality test
+
+data:  log(lh)
+W = 0.97889, p-value = 0.5332
+

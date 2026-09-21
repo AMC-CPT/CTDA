@@ -1,0 +1,2 @@
+   vars  n mean   sd median trimmed  mad min max range skew kurtosis   se
+X1    1 48  2.4 0.55    2.3    2.39 0.59 1.4 3.5   2.1 0.27    -0.84 0.08

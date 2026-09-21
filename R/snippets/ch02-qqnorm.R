@@ -1,0 +1,5 @@
+par(mfrow = c(1, 2))
+qqnorm(lh, main = "Original scale", cex.axis = 0.8, cex.lab = 0.8, cex.main = 0.9)
+qqline(lh)
+qqnorm(log(lh), main = "Log-transformed", cex.axis = 0.8, cex.lab = 0.8, cex.main = 0.9)
+qqline(log(lh))

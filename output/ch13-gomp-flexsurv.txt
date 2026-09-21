@@ -1,0 +1,13 @@
+Call:
+flexsurvreg(formula = Surv(TIME, DV) ~ 1, data = d1, dist = "gompertz")
+
+Estimates: 
+       est      L95%     U95%     se     
+shape  0.02786  0.01704  0.03867  0.00552
+rate   0.00516  0.00272  0.00979  0.00169
+
+N = 50,  Events: 48,  Censored: 2
+Total time at risk: 2755
+Log-likelihood = -229.6566, df = 2
+AIC = 463.3131
+

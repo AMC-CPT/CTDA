@@ -1,0 +1,4 @@
+    Mean       SD        N      SEM      LCL      UCL Skewness Kurtosis 
+ 2.40000  0.55159 48.00000  0.07962  2.23983  2.56017  0.29289 -0.69371 
+attr(,"y")
+[1] "lh"

@@ -1,0 +1,6 @@
+r1 <- Sim(0, 1, 2, -0.5, 1, 10, 100, 200, 2000, 1, 2, 0.7)
+print(cbind(r1$corE, NA, r1$corEt), na.print = "")
+print(cbind(r1$covX, NA, r1$covXt), na.print = "")
+print(cbind(r1$corX, NA, r1$corXt), na.print = "")
+print(cbind(r1$covY, NA, r1$covYt), na.print = "")
+print(cbind(r1$corY, NA, r1$corYt), na.print = "")

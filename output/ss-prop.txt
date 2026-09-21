@@ -1,0 +1,12 @@
+
+     Two-sample comparison of proportions power calculation 
+
+              n = 92.99884
+             p1 = 0.3
+             p2 = 0.5
+      sig.level = 0.05
+          power = 0.8
+    alternative = two.sided
+
+NOTE: n is number in *each* group
+

@@ -1,0 +1,30 @@
+      RR           95% CI %W(common) %W(random)
+1 0.7420 [0.5223; 1.0543]       11.6       14.3
+2 0.6993 [0.4828; 1.0129]       11.0       13.4
+3 0.8225 [0.5051; 1.3393]        5.6        9.2
+4 0.8270 [0.6487; 1.0545]       21.6       20.9
+5 0.8193 [0.5927; 1.1326]       12.0       15.7
+6 1.1183 [0.9411; 1.3289]       38.1       26.5
+
+Number of studies: k = 6
+Number of observations: o = 10816 (o.e = 5599, o.c = 5217)
+Number of events: e = 1113
+
+                         RR           95% CI     z p-value
+Common effect model  0.9130 [0.8166; 1.0208] -1.60  0.1099
+Random effects model 0.8607 [0.7257; 1.0209] -1.72  0.0851
+
+Quantifying heterogeneity (with 95% CIs):
+ tau^2 = 0.0209 [0.0000; 0.1419]; tau = 0.1446 [0.0000; 0.3767]
+ I^2 = 49.4% [0.0%; 79.9%]; H = 1.41 [1.00; 2.23]
+
+Test of heterogeneity:
+    Q d.f. p-value
+ 9.88    5  0.0786
+
+Details of meta-analysis methods:
+- Mantel-Haenszel method (common effect model)
+- Inverse variance method (random effects model)
+- Restricted maximum-likelihood estimator for tau^2
+- Q-Profile method for confidence interval of tau^2 and tau
+- Calculation of I^2 based on Q

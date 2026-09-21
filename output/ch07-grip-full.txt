@@ -1,0 +1,12 @@
+
+	Welch Two Sample t-test
+
+data:  d2$Grip and d2$GripD
+t = 10.4, df = 10390, p-value < 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 1.733074 2.538066
+sample estimates:
+mean of x mean of y 
+ 32.89139  30.75582 
+

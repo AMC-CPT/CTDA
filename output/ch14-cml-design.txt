@@ -1,0 +1,9 @@
+  (Intercept) age
+1           1   8
+2           1  10
+3           1  12
+4           1  14
+5           1   8
+6           1  10
+nParF nParR nParA 
+    2     4     6 

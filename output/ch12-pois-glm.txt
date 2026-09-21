@@ -1,0 +1,22 @@
+
+Call:
+glm(formula = deaths ~ Smoke + Age + I(Age * Age) + offset(log(ni)), 
+    family = "poisson", data = doctors)
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -9.83396    0.29516 -33.317  < 2e-16 ***
+Smoke         0.35452    0.10737   3.302 0.000961 ***
+Age           2.09471    0.18119  11.561  < 2e-16 ***
+I(Age * Age) -0.19438    0.02715  -7.159 8.14e-13 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for poisson family taken to be 1)
+
+    Null deviance: 935.067  on 9  degrees of freedom
+Residual deviance:  12.176  on 6  degrees of freedom
+AIC: 75.243
+
+Number of Fisher Scoring iterations: 4
+

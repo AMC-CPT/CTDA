@@ -1,0 +1,24 @@
+
+	5-sample test for equality of proportions without continuity correction
+
+data:  x1 out of n1
+X-squared = 12.082, df = 4, p-value = 0.01675
+alternative hypothesis: two.sided
+sample estimates:
+   prop 1    prop 2    prop 3    prop 4    prop 5 
+0.9971953 0.9973797 0.9936948 0.9921260 0.9736842 
+
+
+	Chi-squared Test for Trend in Proportions
+
+data:  x1 out of n1 ,
+ using scores: 1 2 3 4 5
+X-squared = 1.8278, df = 1, p-value = 0.1764
+
+
+	Chi-squared Test for Trend in Proportions
+
+data:  x1 out of n1 ,
+ using scores: 0 0.5 1.5 4 7
+X-squared = 6.5701, df = 1, p-value = 0.01037
+

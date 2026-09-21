@@ -1,0 +1,6 @@
+                         lower     est.   upper
+sd((Intercept))       0.836800  2.19402 5.75255
+sd(age)               0.092886  0.21492 0.49729
+cor((Intercept),age) -0.942351 -0.58146 0.40474
+ lower   est.  upper 
+1.0849 1.3101 1.5820 

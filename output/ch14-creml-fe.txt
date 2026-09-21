@@ -1,0 +1,6 @@
+               Value Std.Error DF t-value    p-value
+(Intercept) 16.76111  0.774206 80 21.6494 0.0000e+00
+age          0.66019  0.071161 80  9.2773 2.5091e-14
+               Value Std.Error DF t-value    p-value
+(Intercept) 16.76111  0.774206 26 21.6494 0.0000e+00
+age          0.66019  0.071161 26  9.2773 9.8716e-10

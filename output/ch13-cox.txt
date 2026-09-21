@@ -1,0 +1,16 @@
+Call:
+coxph(formula = Surv(futime, fustat) ~ rx, data = ovarian)
+
+  n= 26, number of events= 12 
+
+      coef exp(coef) se(coef)      z Pr(>|z|)
+rx -0.5964    0.5508   0.5870 -1.016     0.31
+
+   exp(coef) exp(-coef) lower .95 upper .95
+rx    0.5508      1.816    0.1743      1.74
+
+Concordance= 0.608  (se = 0.07 )
+Likelihood ratio test= 1.05  on 1 df,   p=0.3
+Wald test            = 1.03  on 1 df,   p=0.3
+Score (logrank) test = 1.06  on 1 df,   p=0.3
+

@@ -1,0 +1,43 @@
+Approximate 95% confidence intervals
+
+ Fixed effects:
+                 lower       est.      upper
+(Intercept) 15.2183224 16.7611111 18.3038999
+age          0.5183867  0.6601852  0.8019837
+
+ Random Effects:
+  Level: Subject 
+                          lower       est.     upper
+sd((Intercept))       0.9480260  2.3270341 5.7119608
+sd(age)               0.1024729  0.2264278 0.5003229
+cor((Intercept),age) -0.9383092 -0.6093329 0.2986155
+
+ Within-group standard error:
+   lower     est.    upper 
+1.084842 1.310040 1.581985 
+Random effects variance covariance matrix
+            (Intercept)      age
+(Intercept)     5.41510 -0.32106
+age            -0.32106  0.05127
+  Standard Deviations: 2.327 0.22643 
+Subject M01 
+Conditional variance covariance matrix
+       1      2      3      4
+1 1.7162 0.0000 0.0000 0.0000
+2 0.0000 1.7162 0.0000 0.0000
+3 0.0000 0.0000 1.7162 0.0000
+4 0.0000 0.0000 0.0000 1.7162
+  Standard Deviations: 1.31 1.31 1.31 1.31 
+Subject M01 
+Marginal variance covariance matrix
+       1      2      3      4
+1 5.2756 3.7376 3.9158 4.0939
+2 3.7376 5.8370 4.5041 4.8874
+3 3.9158 4.5041 6.8087 5.6808
+4 4.0939 4.8874 5.6808 8.1904
+  Standard Deviations: 2.2969 2.416 2.6093 2.8619 
+Subject = pdLogChol(age) 
+            Variance   StdDev    Corr  
+(Intercept) 5.41508758 2.3270341 (Intr)
+age         0.05126955 0.2264278 -0.609
+Residual    1.71620400 1.3100397       

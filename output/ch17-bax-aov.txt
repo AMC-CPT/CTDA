@@ -1,0 +1,8 @@
+Response : DV
+                  Df Sum Sq Mean Sq F value    Pr(>F)    
+MODEL              3   7422 2473.98  9.7641 3.885e-06 ***
+ as.factor(Dose)   3   7422 2473.98  9.7641 3.885e-06 ***
+RESIDUALS        270  68411  253.38                      
+CORRECTED TOTAL  273  75833                              
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1

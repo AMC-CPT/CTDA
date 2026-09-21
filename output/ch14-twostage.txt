@@ -1,0 +1,6 @@
+Intercept       age 
+ 16.76111   0.66019 
+          Intercept      age
+Intercept    16.227 -1.26497
+age          -1.265  0.13708
+[1] -0.84815

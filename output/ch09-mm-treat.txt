@@ -1,0 +1,13 @@
+  (Intercept) TreatmentB TreatmentC
+1           1          0          0
+2           1          0          0
+3           1          1          0
+4           1          1          0
+5           1          0          1
+6           1          0          1
+attr(,"assign")
+[1] 0 1 1
+attr(,"contrasts")
+attr(,"contrasts")$Treatment
+[1] "contr.treatment"
+

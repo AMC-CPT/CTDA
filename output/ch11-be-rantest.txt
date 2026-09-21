@@ -1,0 +1,22 @@
+$SEQ
+Error: 0.9669*SEQ:SUBJ + 0.0331*MSE
+          Df  Sum Sq Mean Sq F value Pr(>F)
+SEQ    1.000  0.3368 0.33679  0.6919 0.4099
+Error 45.529 22.1626 0.48679               
+
+$`The Rest Terms`
+          Df  Sum Sq Mean Sq F value    Pr(>F)    
+PRD        1  0.0996 0.09958  1.1599    0.2876    
+TRT        1  0.0106 0.01057  0.1231    0.7274    
+SEQ:SUBJ  45 22.5232 0.50052  5.8298 3.173e-08 ***
+RESIDUALS 42  3.6059 0.08585                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+$EMS
+         SEQ PRD TRT SEQ:SUBJ eps
+SEQ        Q           1.8693   1
+PRD            Q                1
+TRT                Q            1
+SEQ:SUBJ               1.9333   1
+

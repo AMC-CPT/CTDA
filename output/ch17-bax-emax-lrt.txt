@@ -1,0 +1,7 @@
+[1] 0.6051457
+          n    paraFull paraReduced   deltaPara      cutoff deltaLogLik        Fval 
+274.0000000   5.0000000   4.0000000   1.0000000   1.9600662   0.1336523   0.2625548 
+       pval 
+  0.6087909 
+attr(,"Verdict")
+[1] "Reduced model is better."

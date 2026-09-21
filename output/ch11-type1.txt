@@ -1,0 +1,18 @@
+Analysis of Variance Table
+
+Response: uptake
+          Df Sum Sq Mean Sq F value    Pr(>F)    
+Type       1 3553.5  3553.5  58.050 4.490e-11 ***
+Treatment  1 1129.0  1129.0  18.443 4.879e-05 ***
+Residuals 80 4897.2    61.2                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Analysis of Variance Table
+
+Response: uptake
+          Df Sum Sq Mean Sq F value    Pr(>F)    
+Treatment  1 1080.5  1080.5  17.651 6.849e-05 ***
+Type       1 3602.0  3602.0  58.843 3.558e-11 ***
+Residuals 80 4897.2    61.2                      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1

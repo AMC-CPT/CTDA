@@ -1,0 +1,11 @@
+s2 <- summary(r2)
+t2 <- with(s2, data.frame(time, n.risk, n.event, surv, std.err, lower, upper, strata))
+sN <- unique(t2$strata)
+pe1 <- min(t2[t2$strata == sN[1] & t2$surv  <= 0.5, "time"])
+ll1 <- min(t2[t2$strata == sN[1] & t2$lower <= 0.5, "time"])
+ul1 <- min(t2[t2$strata == sN[1] & t2$upper <= 0.5, "time"])
+pe2 <- min(t2[t2$strata == sN[2] & t2$surv  <= 0.5, "time"])
+ll2 <- min(t2[t2$strata == sN[2] & t2$lower <= 0.5, "time"])
+ul2 <- min(t2[t2$strata == sN[2] & t2$upper <= 0.5, "time"])
+data.frame(PE = c(pe1, pe2), LL = c(ll1, ll2), UL = c(ul1, ul2))
+r2

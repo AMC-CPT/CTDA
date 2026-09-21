@@ -1,0 +1,26 @@
+Random effects variance covariance matrix
+            (Intercept)       age
+(Intercept)     4.81410 -0.274210
+age            -0.27421  0.046193
+  Standard Deviations: 2.1941 0.21492 
+Subject M01 
+Conditional variance covariance matrix
+       1      2      3      4
+1 1.7162 0.0000 0.0000 0.0000
+2 0.0000 1.7162 0.0000 0.0000
+3 0.0000 0.0000 1.7162 0.0000
+4 0.0000 0.0000 0.0000 1.7162
+  Standard Deviations: 1.31 1.31 1.31 1.31 
+Subject M01 
+Marginal variance covariance matrix
+       1      2      3      4
+1 5.0992 3.5737 3.7644 3.9550
+2 3.5737 5.6653 4.3246 4.7000
+3 3.7644 4.3246 6.6010 5.4450
+4 3.9550 4.7000 5.4450 7.9061
+  Standard Deviations: 2.2582 2.3802 2.5692 2.8118 
+Subject = pdLogChol(age) 
+            Variance   StdDev    Corr  
+(Intercept) 4.81407256 2.1940995 (Intr)
+age         0.04619252 0.2149244 -0.581
+Residual    1.71620470 1.3100400       

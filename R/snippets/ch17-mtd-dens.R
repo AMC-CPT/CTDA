@@ -1,0 +1,5 @@
+oPar <- par(mfrow = c(3, 1))
+plot(density(samp_A), xlab = expression(beta[0]), main = "")
+plot(density(samp_B), xlab = expression(beta[1]), main = "")
+plot(density(samps$MTD), xlim = c(0, 100), xlab = "MTD", main = "")
+par(oPar)
