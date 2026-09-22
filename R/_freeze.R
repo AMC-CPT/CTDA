@@ -174,7 +174,7 @@ freeze <- function(name, seed = 1L, fig = FALSE, fig.w = 5, fig.h = 3.2,
   # ctda.continue = TRUE (En/build.R, 2026-09-22): a snippet that errors is logged to
   # ctda.faillog and skipped instead of halting the whole run; its output file is left
   # as it was and a half-written figure is replaced by the Korean edition's copy.
-  # Default FALSE keeps the Korean build's behaviour (stop on the first error).
+  # Default FALSE keeps the Korean build's behavior (stop on the first error).
   if (isTRUE(getOption("ctda.continue", FALSE))) {
     txt <- tryCatch(utils::capture.output(
       source(snippet, echo = FALSE, print.eval = TRUE, keep.source = FALSE,

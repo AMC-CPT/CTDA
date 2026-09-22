@@ -7,7 +7,7 @@ Trials with R* (임상시험에서의 과학적 추론 with R). Its purpose is t
 reader **remake every number and every figure in the book**; the text of the
 book is not here.
 
-All you need is R. No commercial software, no licence.
+All you need is R. No commercial software, no license.
 
 **The code here is the English edition's**: the comments in the snippets, the
 truncation mark in the frozen output and the labels in the figures are all
@@ -104,7 +104,7 @@ used.
 They are not in the book and they are not here. Instructors may request them
 from `ksbae@acr.kr`.
 
-## Copyright and licence
+## Copyright and license
 
 The copyright in the text of the book belongs to the author and the publisher,
 and the text is not here. The code, the data and the frozen output and figures
