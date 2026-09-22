@@ -8,29 +8,43 @@ with R)의 companion 저장소다. 책에 실린 **모든 숫자와 그림을 �
 
 필요한 것은 R 하나뿐이다. 상용 소프트웨어도, 라이선스도 필요 없다.
 
+**여기 실린 코드는 영문판의 것이다.** 스니펫의 주석, 얼린 출력의 생략 표시, 그림의
+라벨이 모두 영어다. 한국어판 책은 같은 코드를 한글 주석으로 싣는다. 파일 이름과 장
+번호, 콘솔 출력의 숫자, 자료는 언어와 무관하므로 어느 판의 독자든 이 저장소를 그대로
+쓸 수 있다. 찾을 곳을 하나로 두려고 코드는 한 벌만 싣는다.
+
 ## 시작하기
 
 ```sh
 git clone https://github.com/AMC-CPT/CTDA
 cd CTDA
-Rscript R/build.R
+Rscript R/build-all.R
 ```
 
 `output/` 의 콘솔 출력과 `figures/` 의 그림이 다시 만들어진다. 이미 커밋되어 있으므로
 돌리지 않고 그대로 읽어도 된다. 한 장만 보려면 `R/snippets/` 에서 그 장의 파일을 열어
 직접 실행한다.
 
+얼리는 일은 `R/build.R` 이 하고 `R/build-all.R` 은 그것을 부른다. 다른 점은 17장
+하나로, 17장의 비선형 적합은 그룹마다 새 R 프로세스가 필요하다(까닭은
+`R/build-all.R` 머리 주석에 있다). 한 장만 다시 만들 때는 `R/build.R` 을 쓴다.
+
 ## 구조
 
 ```
 R/snippets/chNN-*.R   본문에 실리는 R 코드의 원본 (장 번호 = 책의 장). 401개
 R/build.R             snippets 를 차례로 돌려 output/ 과 figures/ 를 만든다
+R/build-all.R         같은 일을 하되 17장은 그룹마다 새 R 프로세스로 돌린다
 R/_freeze.R           그 도우미 (seed 고정, 세션 공유, 출력 정리)
 output/<name>.txt     얼린 콘솔 출력 (책에 실린 그대로). 339개
 figures/<name>.pdf    얼린 그림. 91개
 data/                 실습 자료
 pyfig/                1·2장 도해의 matplotlib 스크립트와 FIGURE-PROVENANCE.md
 ```
+
+`pyfig/` 의 스크립트는 한국어판의 것이며, 라벨을 그릴 때마다 `pyfig/labels_en.py` 의
+사전으로 옮긴다. 그래서 그 파일들의 주석만 한글로 남아 있다. `CTDA_LANG` 이 언어를
+고르고 여기서는 기본이 영어이므로, 그대로 돌리면 `figures/` 의 그림이 다시 만들어진다.
 
 ## 코드와 출력이 어긋나지 않는 이유
 

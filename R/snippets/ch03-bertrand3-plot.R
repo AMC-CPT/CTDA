@@ -1,6 +1,6 @@
 th <- seq(0, 2 * pi, length.out = 500)
-ms <- -Dist1[, 1] / Dist1[, 2]         # 기울기
-ns <- -ms * Dist1[, 1] + Dist1[, 2]    # y 절편
+ms <- -Dist1[, 1] / Dist1[, 2]         # slope
+ns <- -ms * Dist1[, 1] + Dist1[, 2]    # y intercept
 par(mfrow = c(1, 2))
 plot(0, 0, type = "n", xlim = c(-1, 1), ylim = c(-1, 1), asp = 1, bty = "n",
      xlab = "Chords", ylab = "", xaxp = c(-1, 1, 2), yaxp = c(-1, 1, 2))

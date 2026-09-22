@@ -1,4 +1,4 @@
-LLp <- function(Beta) {   # 포아송 분포의 -log likelihood
+LLp <- function(Beta) {   # -log likelihood of the Poisson
   LogLam <- log(ni) + X %*% Beta
   LogLik <- sum(y * LogLam - exp(LogLam)) - sumlfacty
   -LogLik

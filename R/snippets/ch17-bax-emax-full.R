@@ -1,4 +1,4 @@
-Pred <- function(TH) {              # Sigmoid Emax 구조 모형
+Pred <- function(TH) {              # sigmoid Emax structural model
   Dose <- e$DATA[, "Dose"]
   E0 <- TH[1];  Emax <- TH[2];  ED50 <- TH[3];  Gamm <- TH[4]
   E0 + Emax*Dose^Gamm/(ED50^Gamm + Dose^Gamm)

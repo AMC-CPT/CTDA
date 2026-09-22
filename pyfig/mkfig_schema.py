@@ -3,8 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import (FancyBboxPatch, FancyArrowPatch, Ellipse, Circle,
                                 Rectangle, Polygon, Wedge)
-from mkfig_common import (setup, save as _save_pdf, despine, INK, MUTED, GRID,
-                          ACCENT, ACCENT2, ACCENT3, FILL, FILL2)
+from mkfig_common import (setup, save as _save_pdf, despine, translate_fig, LANG,
+                          INK, MUTED, GRID, ACCENT, ACCENT2, ACCENT3, FILL, FILL2)
 
 setup()
 print("[schematic figures]")
@@ -28,17 +28,38 @@ def save(fig, name):
     그림 1.1(신약개발 과정 개관)의 3줄 라벨이 상자 위아래로 넘친 채 책에 실린 일이
     있었다(2026-09-16 발견). 글꼴 크기나 줄 수를 바꿀 때 눈으로만 확인하면 같은
     결함이 되풀이되므로, 렌더러가 계산한 실제 글자 상자로 포함 여부를 검사한다.
+
+    영어 라벨은 대체로 한국어보다 길어 같은 상자를 넘치기 쉽다. 영어 모드에서는
+    넘친 라벨의 글자 크기를 한 단계씩(0.94배, 최대 8번) 줄여 상자에 맞춘 뒤, 그래도
+    넘치면 예외를 던진다. 한국어판은 종전대로 줄이지 않고 바로 예외를 던진다.
     """
+    translate_fig(fig)                          # 검사 전에 영어로 바꾼다(한국어 모드는 무동작)
     fig.canvas.draw()
     rend = fig.canvas.get_renderer()
     tol = 0.5                                   # 픽셀
+
+    def fits(p, t):
+        pb, tb = p.get_window_extent(rend), t.get_window_extent(rend)
+        return not (tb.x0 < pb.x0 - tol or tb.x1 > pb.x1 + tol or
+                    tb.y0 < pb.y0 - tol or tb.y1 > pb.y1 + tol)
+
+    if LANG == "en":
+        for p, t in _BOXES:
+            if p.figure is not fig:
+                continue
+            for _ in range(8):
+                if fits(p, t):
+                    break
+                t.set_fontsize(t.get_fontsize() * 0.94)
+                fig.canvas.draw()
+                rend = fig.canvas.get_renderer()
+
     bad = []
     for p, t in _BOXES:
         if p.figure is not fig:
             continue
         pb, tb = p.get_window_extent(rend), t.get_window_extent(rend)
-        if (tb.x0 < pb.x0 - tol or tb.x1 > pb.x1 + tol or
-                tb.y0 < pb.y0 - tol or tb.y1 > pb.y1 + tol):
+        if not fits(p, t):
             bad.append("%r: 글자 %s, 상자 %s" % (t.get_text().replace("\n", "/"),
                                               [round(v) for v in tb.extents],
                                               [round(v) for v in pb.extents]))

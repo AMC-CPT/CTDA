@@ -1,4 +1,4 @@
-# Fisher의 방법: 여러 연구의 단측 p-value 를 병합한다.
+# Fisher's method: combine the one-sided p-values of several studies.
 metaP <- function(one.sided.p) {
   ChiSq <- -2 * sum(log(one.sided.p))
   p.value <- 1 - pchisq(ChiSq, 2 * length(one.sided.p))

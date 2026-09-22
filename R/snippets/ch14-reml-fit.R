@@ -1,2 +1,2 @@
-Orth.REML <- lme(distance ~ age, random = ~ age | Subject, data = Orthodont)  # REML 기본
+Orth.REML <- lme(distance ~ age, random = ~ age | Subject, data = Orthodont) # REML default
 summary(Orth.REML)

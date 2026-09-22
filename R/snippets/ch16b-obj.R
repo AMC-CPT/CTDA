@@ -4,7 +4,7 @@ OBJ0 <- function(p) {
   Oi <- vector(length = nID)
   for (i in 1:nID) {
     cID <<- IDs[i]
-    FGH <- PRED(THETA, rep(0, nEta))        # FO: eta = 0 에서 평가
+    FGH <- PRED(THETA, rep(0, nEta))        # FO: evaluated at eta = 0
     Yi <- DATA[DATA$ID == cID, "DV"];  Fi <- FGH[, "F"]
     Gi <- FGH[, GNames, drop = FALSE];  Hi <- FGH[, HNames, drop = FALSE]
     Ri <- Yi - Fi

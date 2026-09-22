@@ -1,4 +1,4 @@
-LLb <- function(b) {   # 이항 분포의 -log likelihood
+LLb <- function(b) {   # -log likelihood of the binomial
   Xb <- X %*% b
   LogLik <- sum(y * Xb - n * log(1 + exp(Xb))) + sumlogny
   -LogLik

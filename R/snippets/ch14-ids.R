@@ -1,3 +1,3 @@
-is(Orthodont)                        # nfnGroupedData: nlme 정의 자료형
+is(Orthodont)                        # nfnGroupedData: a class defined by nlme
 IDs <- unique(Orthodont$Subject)
 nID <- length(IDs);  nID

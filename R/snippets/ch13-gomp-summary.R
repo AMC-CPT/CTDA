@@ -1,1 +1,1 @@
-head(summary(r1)[[1]], 12)              # 각 관찰 시점의 생존확률 (일부)
+head(summary(r1)[[1]], 12)   # survival probability at each time (part)

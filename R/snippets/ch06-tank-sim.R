@@ -5,7 +5,7 @@ qt0975 <- qt(0.975, nSamp - 1)
 Res <- as.data.frame(matrix(ncol = 10, nrow = N))
 colnames(Res) <- c("th1", "LL1", "UL1", "in1", "th2", "LL2", "UL2", "in2", "LL3", "in3")
 for (i in 1:N) {
-  d1 <- sample(nMax, nSamp)                        # 엄밀히는 replace = TRUE 필요
+  d1 <- sample(nMax, nSamp)                        # strictly, replace = TRUE is needed
   th1 <- mean(d1) * 2 - 1
   sd1 <- sqrt((th1^2 - 1) / (3 * nSamp))
   ci1 <- th1 + c(-1, 1) * qt0975 * sd1
@@ -21,6 +21,6 @@ for (i in 1:N) {
   Res[i, 10] <- ifelse(Yn <= nMax & ci2[2] > nMax, TRUE, FALSE)
 }
 colMeans(Res)
-mean(Res[, 3] - Res[, 2])   # ci1 폭, 246.08 -> 가장 넓음
-mean(Res[, 7] - Res[, 6])   # ci2 폭,  91.15
-mean(Res[, 7] - Res[, 9])   # ci3 폭,  67.33 -> 가장 좁음
+mean(Res[, 3] - Res[, 2])   # width of ci1, 246.08 -> widest
+mean(Res[, 7] - Res[, 6])   # width of ci2,  91.15
+mean(Res[, 7] - Res[, 9])   # width of ci3,  67.33 -> narrowest

@@ -1,2 +1,2 @@
-# 표준정규 상위 2.5% 분위수의 제곱은 자유도 1 카이제곱의 상위 5% 분위수와 같다.
+# The squared upper 2.5% normal quantile equals the upper 5% quantile of chi-square(1).
 c(qnorm(1 - 0.05/2)^2, qchisq(1 - 0.05, 1))

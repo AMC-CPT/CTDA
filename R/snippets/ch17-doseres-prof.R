@@ -1,1 +1,1 @@
-pProf(e5)                           # 추정된 가능도 프로파일
+pProf(e5)                           # estimated likelihood profiles

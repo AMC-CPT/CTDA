@@ -9,4 +9,4 @@ Power.chisq <- function(n, p1, p2, N = 10000, alpha = 0.05) {
   }
   mean(Res < alpha)
 }
-Power.chisq(44, 0.5, 0.2)   # 약 0.8
+Power.chisq(44, 0.5, 0.2)   # about 0.8

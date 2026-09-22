@@ -1,1 +1,1 @@
-prop.test(c(104, 189), c(11037, 11034))   # 기본적으로 연속성 보정 사용
+prop.test(c(104, 189), c(11037, 11034))   # continuity correction by default

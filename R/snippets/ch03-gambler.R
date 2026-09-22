@@ -1,11 +1,11 @@
-p  <- 18/38   # 이길 확률
-m0 <- 5       # 시작 금액
-m1 <- 10      # 목표 금액
-N  <- 1000    # 시뮬레이션 횟수
+p  <- 18/38   # probability of winning
+m0 <- 5       # starting money
+m1 <- 10      # target money
+N  <- 1000    # number of simulations
 Res <- data.frame(n = rep(NA, N), Result = rep(NA, N))
 for (i in 1:N) {
-  cM <- m0   # 현재 금액
-  cT <- 0    # 게임 횟수
+  cM <- m0   # current money
+  cT <- 0    # number of games
   while ((cM > 0) & (cM < m1)) {
     cM <- ifelse(runif(1) < p, cM + 1, cM - 1)
     cT <- cT + 1

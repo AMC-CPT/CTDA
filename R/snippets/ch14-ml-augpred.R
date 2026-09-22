@@ -1,1 +1,1 @@
-plot(augPred(Orth.ML))               # 개체별 예측선
+plot(augPred(Orth.ML))               # per-subject fitted lines

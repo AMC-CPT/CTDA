@@ -8,8 +8,8 @@ while (k <= N) {
     k <- k + 1
   }
 }
-colMeans(Res)   # 이론값 7/12 = 0.5833333
-cov(Res)        # 이론값 -1/144 = -0.006944444
+colMeans(Res)   # theoretical 7/12 = 0.5833333
+cov(Res)        # theoretical -1/144 = -0.006944444
 
 x <- seq(0, 1, by = 0.01);  y <- seq(0, 1, by = 0.01)
 z <- outer(x, y, "+")

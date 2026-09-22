@@ -1,6 +1,6 @@
 ObjEta <- function(ETAi) {
-# 외부 변수: e$INTER, e$DATAi, e$THETA, e$invOM, e$SG, e$nEta, e$HNames
-# 외부 함수: e$PRED
+# external variables: e$INTER, e$DATAi, e$THETA, e$invOM, e$SG, e$nEta, e$HNames
+# external function: e$PRED
   FGHDi <- e$PRED(e$THETA, ETAi, e$DATAi)
   Ri    <- e$DATAi[, "DV"] - FGHDi[, "F"]
   if (e$INTER == TRUE) {

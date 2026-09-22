@@ -24,5 +24,5 @@ ObjML <- function(TH) {
     bi[i, ] <<- OM %*% t(Z[ind[[i]], ]) %*% iVq
     Oi[i]   <<- determinant(Vi[[i]], logarithm = TRUE)$modulus[[1]] + t(qi) %*% iVq
   }
-  (nRec*log(2*pi) + sum(Oi))/2   # 음의 로그가능도
+  (nRec*log(2*pi) + sum(Oi))/2   # negative log likelihood
 }

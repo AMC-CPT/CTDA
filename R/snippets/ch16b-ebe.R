@@ -1,4 +1,4 @@
-ObjEta <- function(ETA) {                    # MAP 목적함수: 데이터 부적합 + 사전분포 벌점
+ObjEta <- function(ETA) {   # MAP objective: misfit + prior penalty
   FGH <- PRED(THETA, ETA)
   Ri <- DATA[DATA$ID == cID, "DV"] - FGH[, "F"]
   if (INTER == TRUE) Hi <- FGH[, HNames, drop = FALSE]
@@ -6,7 +6,7 @@ ObjEta <- function(ETA) {                    # MAP 목적함수: 데이터 부�
   Vi <- diag(Hi %*% SG %*% t(Hi))
   sum(log(Vi) + Ri*Ri/Vi) + t(ETA) %*% invOM %*% ETA
 }
-INTER <- FALSE                               # FO는 교호작용 없음
+INTER <- FALSE                               # FO has no interaction
 THETA <- r1$THETA;  invOM <- solve(r1$OMEGA);  SG <- r1$SIGMA
 EBE <- cbind(ID = IDs, ETA1 = 0, ETA2 = 0, ETA3 = 0)
 for (i in 1:nID) {

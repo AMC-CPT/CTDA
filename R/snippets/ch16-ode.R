@@ -1,5 +1,5 @@
 require(deSolve)
-PKo1c <- function(t, y, p) {   # 앞 2식은 원 미분방정식, 뒤 6식은 eta로 편미분한 것
+PKo1c <- function(t, y, p) {   # first 2: original ODEs; next 6: d/d eta of them
   dy1dt <- -p["ka"]*y[1]
   dy2dt <-  p["ka"]*y[1] - p["k"]*y[2]
   dy3dt <- -p["ka"]*y[1] - p["ka"]*y[3]
@@ -20,4 +20,4 @@ Out   <- cbind(Out,
                G2 = (Out[,"7"] - Out[,"F"]*V)/V,   # dF/deta2  (dV/deta2 = V)
                G3 = (Out[,"8"] - Out[,"F"]*0)/V,   # dF/deta3  (dV/deta3 = 0)
                H1 = Out[,"F"], H2 = 1)
-Out[, c("F", "G1", "G2", "G3", "H1", "H2")]   # TabStep 결과와 비교
+Out[, c("F", "G1", "G2", "G3", "H1", "H2")]   # compare with the TabStep result

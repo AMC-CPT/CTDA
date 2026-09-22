@@ -1,8 +1,8 @@
 STEP <- "COV"
 p <- c(r1$THETA, r1$OMEGA[upper.tri(r1$OMEGA, diag = TRUE)], diag(r1$SIGMA))
 require(numDeriv)
-Rmat <- hessian(OBJ0, p)/2                  # R 행렬 = Hessian / 2
-OiS0 <- function(p) {                        # 한 대상자의 O_i (S 행렬용)
+Rmat <- hessian(OBJ0, p)/2                  # R matrix = Hessian / 2
+OiS0 <- function(p) {                        # O_i of one subject (for the S matrix)
   THETA <- p[1:nTheta]; OM <- ltv2mat(p[iOM]); SG <- diag(p[iSG])
   FGH <- PRED(THETA, rep(0, nEta))
   Fi <- FGH[, "F"]; Gi <- FGH[, GNames, drop = FALSE]; Hi <- FGH[, HNames, drop = FALSE]
@@ -17,6 +17,6 @@ CalcSmat <- function(p) {                    # S = (1/4) sum grad(O_i) grad(O_i)
 }
 Smat <- CalcSmat(p)
 invR <- solve(Rmat)
-Cov <- invR %*% Smat %*% invR               # 샌드위치 공분산
-SE  <- sqrt(diag(Cov));  SE                  # 표준오차
-EigenVal <- sort(eigen(cov2cor(Cov))$values);  EigenVal   # 조건수 진단
+Cov <- invR %*% Smat %*% invR               # sandwich covariance
+SE  <- sqrt(diag(Cov));  SE                  # standard errors
+EigenVal <- sort(eigen(cov2cor(Cov))$values);  EigenVal   # condition-number diagnostic

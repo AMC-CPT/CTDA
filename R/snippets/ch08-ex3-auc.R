@@ -6,8 +6,8 @@ simAUC <- function(AUC0 = 100, Mult = 2, CV = 50, n = 6, N = 2000) {
   for (i in 1:N) {
     r1 <- rnorm(n, logMu0, logSD0)
     r2 <- rnorm(n, logMu1, logSD1)
-    Res[i, 1] <- mean(exp(r1));  Res[i, 2] <- mean(exp(r2))   # 산술평균
-    Res[i, 3] <- exp(mean(r1));  Res[i, 4] <- exp(mean(r2))   # 기하평균
+    Res[i, 1] <- mean(exp(r1));  Res[i, 2] <- mean(exp(r2))   # arithmetic means
+    Res[i, 3] <- exp(mean(r1));  Res[i, 4] <- exp(mean(r2))   # geometric means
   }
   c(sum(Res[, 1] > Res[, 2])/N, sum(Res[, 3] > Res[, 4])/N)
 }

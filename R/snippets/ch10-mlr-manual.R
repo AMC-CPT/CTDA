@@ -4,8 +4,8 @@ XpX  <- t(X) %*% X
 iXpX <- solve(XpX)
 b <- iXpX %*% t(X) %*% y
 t(b)                                          # beta hat
-yhat <- X %*% b;  t(yhat)                     # 적합값
-e <- y - yhat;  t(e)                          # 잔차
+yhat <- X %*% b;  t(yhat)                     # fitted values
+e <- y - yhat;  t(e)                          # residuals
 SSE <- sum(e^2)
 DFr <- length(y) - qr(XpX)$rank;  DFr
 MSE <- as.numeric(SSE / DFr);  MSE

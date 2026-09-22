@@ -1,1 +1,1 @@
-coef(Orth.ML)[IDs, ]                 # 개체별 intercept, slope (fixef + ranef)
+coef(Orth.ML)[IDs, ]                 # per-subject intercept, slope (fixef + ranef)

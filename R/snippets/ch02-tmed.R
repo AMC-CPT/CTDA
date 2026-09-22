@@ -1,1 +1,1 @@
-tmed <- (tis[1:10] + c(tis[2:10], 70)) / 2   # 마지막 시간은 임의로 정한 값
+tmed <- (tis[1:10] + c(tis[2:10], 70)) / 2   # the last time is an arbitrary choice

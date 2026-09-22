@@ -1,4 +1,4 @@
-# 이항분포 B(20, 0.3)의 확률질량함수(pmf)
+# Probability mass function (pmf) of the binomial B(20, 0.3)
 n <- 20
 p <- 0.3
 xs <- 0:n

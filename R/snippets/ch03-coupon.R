@@ -1,8 +1,8 @@
-k <- 100    # 카드 종류
-N <- 1000   # 시뮬레이션 횟수
+k <- 100    # kinds of card
+N <- 1000   # number of simulations
 Res <- rep(NA, N)
 for (i in 1:N) {
-  nCard <- rep(0, k)   # 0: 없음, 1: 있음
+  nCard <- rep(0, k)   # 0: not yet, 1: collected
   nT <- 0
   while (sum(nCard) < k) {
     nCard[sample(k, 1)] <- 1

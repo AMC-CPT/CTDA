@@ -1,2 +1,2 @@
-Df <- 10     # 자유도: V 를 만들기 위해 더할 Z 의 개수
-nV <- 5000   # 카이제곱 확률변수 V 의 개수
+Df <- 10     # degrees of freedom: number of Zs summed to make V
+nV <- 5000   # number of chi-square variables V

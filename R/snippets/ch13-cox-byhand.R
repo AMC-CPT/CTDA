@@ -1,5 +1,5 @@
 ovarian$Z <- ovarian$rx - 1
-mLL <- function(b) {                     # 김종호 p143
+mLL <- function(b) {                     # Kim JH, p.143
   Div <- vector(length = nrow(ovarian))
   for (i in 1:nrow(ovarian))
     Div[i] <- sum(exp(ovarian[ovarian$futime >= ovarian[i, "futime"], "Z"] * b))

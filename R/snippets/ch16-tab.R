@@ -1,2 +1,2 @@
 sdtab <- TabStep()
-sdtab[sdtab$ID == 1, ]   # 첫 번째 대상자
+sdtab[sdtab$ID == 1, ]   # first subject

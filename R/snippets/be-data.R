@@ -1,5 +1,6 @@
 library(sasLM)
-# sasLM의 BEdata: 2x2 교차 생동시험의 Cmax (Bae & Kang 2017). 한 대상자가 두 번 측정.
+# BEdata of sasLM: Cmax of a 2x2 crossover BE study (Bae & Kang 2017);
+# each subject is measured twice.
 str(BEdata)
-# 설계 배치: 순서군(SEQ) x 시기(PRD)
+# design layout: sequence (SEQ) x period (PRD)
 with(BEdata, table(SEQ, PRD))

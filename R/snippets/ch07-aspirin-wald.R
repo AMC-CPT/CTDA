@@ -1,4 +1,4 @@
 library(sasLM)
-RD(104, 11037, 189, 11034)   # 연속성 보정 없음
-RR(104, 11037, 189, 11034)   # active 먼저, placebo 나중
+RD(104, 11037, 189, 11034)   # no continuity correction
+RR(104, 11037, 189, 11034)   # active first, placebo second
 OR(104, 11037, 189, 11034)

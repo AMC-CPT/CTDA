@@ -1,2 +1,2 @@
-y ~ A/B/C/D     # 많은 패키지에서 지원
-y ~ A/B/C/D/E   # 많은 패키지에서 미지원
+y ~ A/B/C/D     # supported by many packages
+y ~ A/B/C/D/E   # not supported by many packages

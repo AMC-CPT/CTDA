@@ -1,7 +1,7 @@
-# q = 2 일 때 카이제곱 분포와 F 분포의 상위 확률 비교
+# Upper-tail probabilities of the chi-square and F distributions when q = 2
 x <- 1:10
 n <- 108
 p <- 7
 q <- 2
-1 - pchisq(x, q)       # 카이제곱 분포 사용
-1 - pf(x/q, q, n - p)  # F 분포 사용
+1 - pchisq(x, q)       # using the chi-square distribution
+1 - pf(x/q, q, n - p)  # using the F distribution

@@ -1,2 +1,2 @@
-ellipRange(mu0, radius0, alpha0)   # 참값
-ellipRange(mu, radius, alpha)      # 추정값
+ellipRange(mu0, radius0, alpha0)   # true values
+ellipRange(mu, radius, alpha)      # estimates

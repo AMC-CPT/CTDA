@@ -4,7 +4,8 @@ OMinit <- matrix(c(0.2, 0.1, 0.1,  0.1, 0.2, 0.1,  0.1, 0.1, 0.2), nrow = nEta)
 SGinit <- diag(c(0.1, 0.1))
 LB <- rep(0, nTheta);  UB <- rep(1000000, nTheta)   # lower/upper bound
 
-# 예측함수의 1차(G) 및 2차(D) 편미분을 기호미분으로 준비
+# first (G) and second (D) derivatives of the prediction function, by symbolic
+# differentiation
 FGD <- deriv(~ DOSE/(TH2*exp(ETA2))*TH1*exp(ETA1)/(TH1*exp(ETA1) - TH3*exp(ETA3))*
                (exp(-TH3*exp(ETA3)*TIME) - exp(-TH1*exp(ETA1)*TIME)),
              c("ETA1", "ETA2", "ETA3"),

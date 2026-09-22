@@ -1,4 +1,4 @@
-Pred <- function(TH) {              # Gamma를 제외한 Emax 모형
+Pred <- function(TH) {              # Emax model without Gamma
   Dose <- e$DATA[, "Dose"]
   E0 <- TH[1];  Emax <- TH[2];  ED50 <- TH[3]
   E0 + Emax*Dose/(ED50 + Dose)

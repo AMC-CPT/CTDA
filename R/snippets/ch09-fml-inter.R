@@ -1,3 +1,3 @@
-y ~ A:B           # 교호작용항만
-y ~ A + B + A:B   # 저차항 + 교호작용
-y ~ A * B         # 위와 동일 (축약형)
+y ~ A:B           # interaction only
+y ~ A + B + A:B   # main effects + interaction
+y ~ A * B         # same as above (shorthand)

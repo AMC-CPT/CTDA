@@ -1,1 +1,1 @@
-solve(Orth.ML$apVar)                 # 임의효과 추정값의 Hessian 행렬
+solve(Orth.ML$apVar)                 # Hessian of the random-effect estimates

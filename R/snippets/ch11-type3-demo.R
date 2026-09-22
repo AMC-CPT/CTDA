@@ -7,4 +7,4 @@ d1 <- data.frame(weight, treatment, variety)
 
 library(car)
 options(contrasts = c("contr.sum", "contr.poly"))
-Anova(lm(weight ~ treatment * variety, d1), type = 3, singular.ok = TRUE)   # SAS 와 다름
+Anova(lm(weight ~ treatment * variety, d1), type = 3, singular.ok = TRUE) # differs from SAS

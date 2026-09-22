@@ -6,7 +6,7 @@ mu <- colMeans(Data);  mu
 mCov <- cov(Data);  mCov
 eg <- eigen(mCov)
 alpha <- atan(eg$vectors[2, 1] / eg$vectors[1, 1]);  alpha * 180/pi
-radius <- sqrt(dimR * qf(ci, dimR, npoints - npara) * eg$values)   # 표본자료로부터
+radius <- sqrt(dimR * qf(ci, dimR, npoints - npara) * eg$values)   # from the sample
 mathr::ellipse(mu0, radius0, alpha0, col = "#123669", asp = 1)
 mathr::ellipse(mu, radius, alpha, asp = 1, add = TRUE)
 points(Data)

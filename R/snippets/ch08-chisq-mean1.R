@@ -1,1 +1,1 @@
-mean(rV)    # E(V) = k (자유도)
+mean(rV)    # E(V) = k (degrees of freedom)

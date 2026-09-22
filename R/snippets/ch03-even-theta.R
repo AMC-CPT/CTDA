@@ -1,5 +1,5 @@
 Slope <- 1
-mean(tan(runif(10000, 0, pi/2)) < Slope)   # 이론값 atan(1)/(pi/2) = 0.5
+mean(tan(runif(10000, 0, pi/2)) < Slope)   # theoretical value atan(1)/(pi/2) = 0.5
 atan(Slope)              # pi/4
 atan(Slope) / (pi/2)     # 0.5
 mp <- tan(pi/4)

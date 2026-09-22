@@ -1,1 +1,1 @@
-intervals(Orth.ML)                   # 고정효과 + 임의효과(G) 신뢰구간
+intervals(Orth.ML)   # CIs of the fixed and random effects (G)

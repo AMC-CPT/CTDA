@@ -25,6 +25,6 @@ ObjREML <- function(TH) {
     bi[i, ] <<- OM %*% t(Z[ind[[i]], ]) %*% iVq
     S4 <- S4 + t(qi) %*% iVq
   }
-  S0 <- (nRec - nParF)*log(2*pi)   # 상수부 (ML과 다름)
-  (S0 + S3 + S4 + determinant(S1, logarithm = TRUE)$modulus[[1]])/2   # 음의 로그가능도
+  S0 <- (nRec - nParF)*log(2*pi)   # constant term (differs from ML)
+  (S0 + S3 + S4 + determinant(S1, logarithm = TRUE)$modulus[[1]])/2 # -logLik
 }

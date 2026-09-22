@@ -9,20 +9,20 @@ book is not here.
 
 All you need is R. No commercial software, no licence.
 
-**The book is written in Korean, and so are the comments in about half of the
-code files.** The rest is not language-bound: the file names, the chapter
-numbering, the console output, the figures and the data are the same in any
-language, so the code can be read and run, and your result compared against the
-book's, without Korean. An English edition of the book is in preparation; when
-it is ready its translated code will be added here as `En/`, as it already has
-been for volume 4.
+**The code here is the English edition's**: the comments in the snippets, the
+truncation mark in the frozen output and the labels in the figures are all
+English. The book was written in Korean first and the Korean edition prints the
+same code with Korean comments; a reader of either edition can use this
+repository, because the file names, the chapter numbering, the numbers in the
+console output and the data do not change with the language. Only one set of
+code is kept here, so that there is one place to look.
 
 ## Getting started
 
 ```sh
 git clone https://github.com/AMC-CPT/CTDA
 cd CTDA
-Rscript R/build.R
+Rscript R/build-all.R
 ```
 
 That remakes the console output in `output/` and the figures in `figures/`.
@@ -30,17 +30,29 @@ They are committed already, so they can simply be read without running
 anything. To follow one chapter, open that chapter's files in `R/snippets/` and
 run them yourself.
 
+`R/build.R` is what does the freezing and `R/build-all.R` drives it. The
+difference is chapter 17, whose many nonlinear fits need one R process per
+group; the comment at the head of `R/build-all.R` says why. To remake a single
+chapter, run `R/build.R`.
+
 ## Structure
 
 ```
 R/snippets/chNN-*.R   the R code printed in the book (chapter number = the book's). 401 files
 R/build.R             runs the snippets in order and makes output/ and figures/
+R/build-all.R         the same, with chapter 17 run one group per R process
 R/_freeze.R           its helper (fixes the seed, shares the session, tidies the output)
 output/<name>.txt     frozen console output, as printed in the book. 339 files
 figures/<name>.pdf    frozen figures. 91 files
 data/                 the example data
 pyfig/                the matplotlib scripts of the Ch 1-2 diagrams, and FIGURE-PROVENANCE.md
 ```
+
+The scripts in `pyfig/` are the ones the Korean edition uses; they carry its
+labels and translate them through `pyfig/labels_en.py` as each label is drawn,
+which is why their comments are still Korean. `CTDA_LANG` selects the language
+and defaults to English here, so running them reproduces the figures in
+`figures/`.
 
 ## Why the code and its output cannot drift apart
 

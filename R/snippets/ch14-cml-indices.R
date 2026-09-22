@@ -6,5 +6,5 @@ for (i in 1:nID) {
   Vi[[i]]   <- matrix(NA, nrow = iRec[i], ncol = iRec[i])
   iVi[[i]]  <- matrix(NA, nrow = iRec[i], ncol = iRec[i])
 }
-bi <- matrix(nrow = nID, ncol = ncol(Z));  rownames(bi) <- IDs   # EBE 저장
-Oi <- rep(NA, nID)                                               # 개체별 OFV
+bi <- matrix(nrow = nID, ncol = ncol(Z));  rownames(bi) <- IDs   # stores the EBEs
+Oi <- rep(NA, nID)                                               # per-subject OFV

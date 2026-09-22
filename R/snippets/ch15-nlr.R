@@ -1,6 +1,6 @@
 DOSE <- 320                      # mg
 TIME <- d2[, "TIME"]
-fPK <- function(THETA) {         # 예측함수 (구조 모형)
+fPK <- function(THETA) {         # prediction function (structural model)
   K  <- THETA[1]
   Ka <- THETA[2]
   V  <- THETA[3]

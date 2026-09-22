@@ -11,4 +11,4 @@ while (n < N) {
   n <- n + 1
   Dist[n, ] <- c(x1, y1, m, dist1)
 }
-mean(Dist[, 4] < Radius / 2)   # 이론값 1/2
+mean(Dist[, 4] < Radius / 2)   # theoretical value 1/2

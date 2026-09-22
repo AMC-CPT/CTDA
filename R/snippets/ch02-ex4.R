@@ -1,4 +1,4 @@
-Theoph   # 12명, 320 mg 경구 투여 후 24시간 동안 11회 채혈
+Theoph   # 12 subjects, 11 samples over 24 h after 320 mg by mouth
 
 plot(Theoph)                                 # Figure 1
 

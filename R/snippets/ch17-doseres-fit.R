@@ -1,4 +1,4 @@
-Pred <- function(TH) {              # Emax 구조 모형
+Pred <- function(TH) {              # Emax structural model
   Dose <- e$DATA[, "Dose"]
   Emax <- TH[1];  ED50 <- TH[2]
   Emax*Dose/(ED50 + Dose)

@@ -1,1 +1,1 @@
-cSS(ce1[1, , drop = FALSE], rx)   # 절편의 SS
+cSS(ce1[1, , drop = FALSE], rx)   # SS of the intercept

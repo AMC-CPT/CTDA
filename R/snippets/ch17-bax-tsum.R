@@ -1,2 +1,2 @@
 require(sasLM)
-tsum(DV ~ Dose, d6)          # 용량군별 기술통계
+tsum(DV ~ Dose, d6)          # descriptive statistics by dose group

@@ -1,80 +1,95 @@
-# 1·2장 그림의 출처와 저작권 (Figure Provenance)
+# Provenance and copyright of the figures of chapters 1 and 2
 
-`pyfig/` 의 스크립트가 만드는 그림 **22점과 R 이 만드는 1점(`qdm-xyz`)은 모두 이 교재를 위해
-새로 그린 원저작물이다.** 저자의 원 발표자료(2022-11-18 DIA conference,
-2022-03-14 BD How to decide)에 포함되어 있던 제3자 도판(스캔·화면 캡처·인용 이미지)은
-**한 장도 사용하지 않았다.**
+**The 22 figures the scripts of `pyfig/` produce, and the one R produces
+(`qdm-xyz`), are all original drawings made for this book.** Not one of the
+third-party illustrations (scans, screen captures, quoted images) that appeared
+in the author's original lecture material (the DIA conference talk of
+2022-11-18 and "BD How to decide" of 2022-03-14) has been used.
 
-## 분류
+## Classes
 
-- **A. 자료로부터 새로 작도** — 공개 통계 또는 저자 보유 자료를 원본으로 하여 직접 작도.
-- **B. 개념을 새로 도해** — 원 발표자료가 인용했던 제3자 도판을 쓰지 않고, 그 도판이 전달하던
-  **사실·개념만을 근거로** 완전히 새로 설계·작도.
-- **C. 본문을 위해 새로 고안** — 원 발표자료에 없었으나 본문의 논증에 필요하여 새로 만든 것.
+- **A. Redrawn from data** — drawn directly from public statistics or from the
+  author's own data.
+- **B. The concept drawn anew** — the third-party illustration the original
+  lecture quoted is not used; the drawing was designed and made from scratch
+  **from the facts and the concept it conveyed**, and from nothing else.
+- **C. Newly devised for the text** — not in the original lecture material,
+  made because the argument of the text needed it.
 
-## 목록
+## The list
 
-| 그림 | 파일 | 분류 | 근거 자료 | 저작권 처리 |
+| Figure | File | Class | Source of the facts | How copyright is handled |
 |---|---|---|---|---|
-| 1.1  | `ov-fda-process` | B | US FDA 신약개발 과정 도식의 사실관계(단계·소요기간·가속경로) | 원 도식을 복제하지 않고 단계와 기간만을 근거로 새로 작도 |
-| 1.2  | `ov-attrition-funnel` | B | NTRM(2002)의 화합물 수 축소(수만→수백→수십→5→2) | 원 도표를 복제하지 않고 깔때기 도해로 새로 설계. 원자료에 없는 수치는 넣지 않았다 |
-| 1.7  | `ov-tollgates` | B | 회사 내부 관문 구조(김영훈, 한미약품, 2011-06-28 발표자료의 사실관계) | 원 슬라이드를 복제하지 않고 관문·평가항목·결정주체의 3단 구조로 새로 작도 |
-| 1.8  | `ov-four-pillars` | B | '제1상까지 보는 네 개의 기둥' 개념 | 원 슬라이드의 픽토그램을 제거하고 새로 작도 |
-| 1.9  | `ov-potency-efficacy` | B | 역가와 효능의 구별(약물 A: EC50 $10^{-6}$ M·Emax 1.0 / B: EC50 $10^{-8}$ M·Emax 0.5) | Emax 모형으로 새로 작도 |
-| 1.10 | `ov-benefit-risk` | B | 용량에 따른 유익성·위해성 곡선 개념 | 로지스틱 함수로 새로 작도. 치료역 음영을 추가 |
-| 1.11 | `ov-logp-schematic` | B | 교과서가 제시하는 LogP–생체이용률 종형 관계(최적 0<LogP<3) | 제3자 도판을 쓰지 않고 모식도로 새로 작도. 출처 불명의 cLogP 분포 히스토그램은 삭제 |
-| 1.12 | `ov-logp-reality` | A | 저자가 공개자료에서 취합한 실측 LogP·경구 생체이용률 45개 약물(`data/LogP-F.csv`) | 저자 자료. 직접 작도($n=45$, $r=-0.1324$). 수치는 `R/snippets/qdm-logp.R` 이 재계산한다 |
-| 1.13 | `ov-ind-to-market` | A | 저자의 IND-to-Market 자료 | 저자 자료. 직접 작도 |
-| 1.14 | `ov-risk-perception` | B | Slovic P, Fischhoff B, Lichtenstein S. Rating the risks. *Environment* 1979;21(3) | 원 도판을 복제하지 않고 **모식도**로 새로 작도. 개별 항목명과 실측 좌표는 쓰지 않고, 판단선의 기울기가 1보다 작다는 결론만 반영 |
-| 1.15 | `ov-equivalent-risk` | B | Kletz TA. What risks should we run? *New Scientist* 1977;74:320--322 | 삽화를 쓰지 않고 등가위험 네 항목의 사실관계만을 상자 도해로 새로 작도 |
-| 1.16 | `ov-voluntary-risk` | B | Starr C. Social benefit versus technological risk. *Science* 1969;165 | 원 도판을 복제하지 않고 모식도로 새로 작도. 실측 좌표는 쓰지 않고 두 직선이 약 1000배 벌어진다는 결론만 반영 |
-| 1.17 | `ov-numbers-not-added` | B | 단위가 다른 숫자를 더하는 오류(착상의 출처: Dana Fradon, *The New Yorker*, 2001) | 원 만평을 쓰지 않고 가상의 표지판을 새로 작도 |
-| 2.1  | `qdm-observation-inference` | B | Chevalier의 '호주의 검은 양' 일화(텍스트) | 원 슬라이드의 스톡 사진을 제거하고, 주장 범위의 축소를 막대 길이로 나타내는 도해를 새로 설계 |
-| 2.2  | `qdm-signalling-network` | B | 세포 신호전달망의 복잡성이라는 개념 | Reactome·위키미디어 도판을 쓰지 않고 익명 노드로 이루어진 개념도를 새로 설계 |
-| 2.3  | `qdm-xyz` | A | 저자의 x--y--z 시뮬레이션($\rho_{xy}=0.7$, $\rho_{yz}=0.5$, $\rho_{xz}=-0.1$) | **R 로 생성한다**(`R/snippets/qdm-xyz.R`, `set.seed(1)`). 본문이 같은 코드와 콘솔 출력을 함께 싣기 때문에 그림도 R 로 만들어야 수치가 어긋나지 않는다 |
-| 2.4  | `qdm-anscombe` | A | Anscombe(1973)가 공표한 11쌍×4조의 수치자료 | 수치자료는 사실. 그림은 새로 작도(위키미디어 SVG 미사용). 요약통계량은 `R/snippets/qdm-anscombe.R` 이 R 내장 `anscombe` 자료로 재계산한다 |
-| 2.5  | `qdm-simpson` | B | Simpson의 역설 개념 | 위키미디어 그림을 쓰지 않고 5개 층을 직접 모의생성하여 작도 |
-| 2.6  | `qdm-korea-mortality` | A | 국가데이터처(구 통계청) 사망원인통계 2008--2024년 확정 + 2025년 출생·사망통계(잠정) | 공개 통계 수치를 직접 작도. 수치는 사실이므로 저작권 대상이 아니다 |
-| 2.7  | `qdm-dose-vs-exposure` | C | 없음(본문 2.3.3절의 논증을 위해 새로 고안) | 개체간 청소율 변이를 넣은 모의자료($n=72$)를 직접 생성·작도 |
-| 2.8  | `qdm-likelihood-interval` | C | 없음(본문 2.3.6절의 논증을 위해 새로 고안) | 이항자료 $n=10$, $x=2$의 우도함수를 직접 계산·작도. 그림의 수치는 `R/snippets/qdm-li.R` 의 고정 출력과 일치한다(LI $(0.0232, 0.5589)$, Wald $(-0.0479, 0.4479)$) |
-| 2.9  | `qdm-certainty-information` | B | 개발 단계에 따른 확실성·정보량의 비대칭 증가 | 새로 작도 |
-| 2.10 | `qdm-disciplines-venn` | B | 정량적 추론에 필요한 학문 영역 | 새로 작도 |
+| 1.1  | `ov-fda-process` | B | The facts of the US FDA drug development diagram (stages, durations, accelerated routes) | The original diagram is not copied; drawn anew from the stages and durations alone |
+| 1.2  | `ov-attrition-funnel` | B | The compound attrition of NTRM (2002) (tens of thousands to hundreds to tens to 5 to 2) | The original table is not copied; designed anew as a funnel. No number that is not in the source was added |
+| 1.7  | `ov-tollgates` | B | The structure of a company's internal tollgates (the facts of the presentation by YH Kim, Hanmi Pharmaceutical, 2011-06-28) | The original slide is not copied; drawn anew as a three-tier structure of gate, items assessed and decision maker |
+| 1.8  | `ov-four-pillars` | B | The concept of the four pillars looked at up to phase 1 | The pictograms of the original slide are removed and the figure drawn anew |
+| 1.9  | `ov-potency-efficacy` | B | The distinction between potency and efficacy (drug A: EC50 $10^{-6}$ M, Emax 1.0; B: EC50 $10^{-8}$ M, Emax 0.5) | Drawn anew from the Emax model |
+| 1.10 | `ov-benefit-risk` | B | The concept of benefit and risk curves against dose | Drawn anew from logistic functions, with the therapeutic window shaded |
+| 1.11 | `ov-logp-schematic` | B | The bell-shaped LogP-bioavailability relation of the textbooks (optimum 0 < LogP < 3) | No third-party illustration is used; drawn anew as a schematic. A histogram of cLogP of unknown origin was dropped |
+| 1.12 | `ov-logp-reality` | A | Measured LogP and oral bioavailability of 45 drugs, compiled by the author from public sources (`data/LogP-F.csv`) | The author's own data, drawn directly ($n=45$, $r=-0.1324$). The numbers are recomputed by `R/snippets/qdm-logp.R` |
+| 1.13 | `ov-ind-to-market` | A | The author's IND-to-market data | The author's own data, drawn directly |
+| 1.14 | `ov-risk-perception` | B | Slovic P, Fischhoff B, Lichtenstein S. Rating the risks. *Environment* 1979;21(3) | The original figure is not copied; drawn anew as a **schematic**. Neither the individual item names nor the measured coordinates are used, only the conclusion that the judgment line has a slope below 1 |
+| 1.15 | `ov-equivalent-risk` | B | Kletz TA. What risks should we run? *New Scientist* 1977;74:320--322 | The illustration is not used; only the facts of the four equivalent risks, drawn anew as a box diagram |
+| 1.16 | `ov-voluntary-risk` | B | Starr C. Social benefit versus technological risk. *Science* 1969;165 | The original figure is not copied; drawn anew as a schematic. The measured coordinates are not used, only the conclusion that the two lines lie about 1000-fold apart |
+| 1.17 | `ov-numbers-not-added` | B | The error of adding numbers with different units (the idea comes from Dana Fradon, *The New Yorker*, 2001) | The original cartoon is not used; an imaginary town sign was drawn anew |
+| 2.1  | `qdm-observation-inference` | B | Chevalier's anecdote of the black sheep of Australia (text) | The stock photograph of the original slide is removed, and a diagram showing the narrowing scope of the claim as bar lengths was designed anew |
+| 2.2  | `qdm-signalling-network` | B | The concept of the complexity of a cell signaling network | Neither the Reactome nor the Wikimedia figure is used; a conceptual diagram of anonymous nodes was designed anew |
+| 2.3  | `qdm-xyz` | A | The author's x--y--z simulation ($\rho_{xy}=0.7$, $\rho_{yz}=0.5$, $\rho_{xz}=-0.1$) | **Generated in R** (`R/snippets/qdm-xyz.R`, `set.seed(1)`). Since the text prints the same code and console output, the figure has to come from R too, or the numbers would disagree |
+| 2.4  | `qdm-anscombe` | A | The 4 sets of 11 pairs published by Anscombe (1973) | The numbers are facts. The figure is drawn anew (the Wikimedia SVG is not used). The summary statistics are recomputed by `R/snippets/qdm-anscombe.R` from R's built-in `anscombe` data |
+| 2.5  | `qdm-simpson` | B | The concept of Simpson's paradox | The Wikimedia figure is not used; five strata were simulated and drawn directly |
+| 2.6  | `qdm-korea-mortality` | A | National Data Agency (formerly Statistics Korea), causes of death statistics 2008--2024 (final) and birth and death statistics 2025 (preliminary) | Public statistics, drawn directly. The numbers are facts and carry no copyright |
+| 2.7  | `qdm-dose-vs-exposure` | C | None (devised for the argument of section 2.3.3) | Simulated data with between-subject variability in clearance ($n=72$), generated and drawn directly |
+| 2.8  | `qdm-likelihood-interval` | C | None (devised for the argument of section 2.3.6) | The likelihood of binomial data with $n=10$, $x=2$, computed and drawn directly. The numbers in the figure agree with the frozen output of `R/snippets/qdm-li.R` (LI $(0.0232, 0.5589)$, Wald $(-0.0479, 0.4479)$) |
+| 2.9  | `qdm-certainty-information` | B | The asymmetric growth of certainty and information over the stages of development | Drawn anew |
+| 2.10 | `qdm-disciplines-venn` | B | The disciplines needed for quantitative reasoning | Drawn anew |
 
-1장의 그림 1.3~1.6(증거의 수준, 대조군 결정나무, 3군 시험 시나리오, ITT/PP 해석)은
-본문 `book/ch-overview.tex` 안의 **TikZ 원저작물**이므로 이 표에 없다.
+Figures 1.3 to 1.6 of chapter 1 (levels of evidence, the decision tree for the
+control group, the scenarios of a three-arm trial, the reading of ITT against
+PP) are **original TikZ drawings inside the manuscript** and so are not in this
+table.
 
-## 그림으로 싣지 않고 삭제한 항목
+## What was dropped instead of drawn
 
-원 발표자료에는 있었으나 저작권 문제 없이 재현할 수 없어 **그림으로 싣지 않은** 것들이다.
-해당 내용은 본문 서술이나 표로 대체하였다.
+These were in the original lecture material but could not be reproduced without
+a copyright problem, so **they are not in the book as figures**. The content
+was carried over as text or as a table instead.
 
-| 원 슬라이드 | 삭제 사유 | 대체 |
+| Original slide | Why it was dropped | What replaced it |
 |---|---|---|
-| 알파고--이세돌 제1국 기보 | 이미지가 제3자 저작물이고 좌표 전사는 오기 위험이 크다 | 본문 서술(2.5.2절) |
-| 식당 메뉴판 'RISKS / BENEFITS' 만평(서명 있음) | 서명이 있는 제3자 만평 | 본문 서술(1.10.4절) |
-| Lipinski 규칙, in vitro 목표치, 항진균제 TPP 예시(『제약산업학』 지면 스캔 3종) | 국내 교재 지면 스캔 | 내용을 본문 표로 재작성하고 출처 명기 |
-| Drugs@FDA 화면 캡처 | 기관 로고·상표 포함 | 본문 서술(2.5.4절) |
-| 시판 약물 cLogP 분포 히스토그램 | 출처 불명의 제3자 그림, 원자료 없음 | 삭제 |
-| 도서 표지 11종, 『제약산업학』 표지 | 출판사 저작물 | '더 읽을거리'와 참고문헌 항목 |
+| The game record of AlphaGo against Lee Sedol, game 1 | The image is a third-party work, and transcribing the coordinates invites error | Text (section 2.5.2) |
+| The restaurant menu cartoon 'RISKS / BENEFITS' (signed) | A signed third-party cartoon | Text (section 1.10.4) |
+| Lipinski's rules, in vitro targets, an antifungal TPP example (three page scans from a Korean textbook) | Page scans of a Korean textbook | The content was rewritten as tables in the text, with the source named |
+| A screen capture of Drugs@FDA | Contains the agency's logo and marks | Text (section 2.5.4) |
+| A histogram of the cLogP of marketed drugs | A third-party figure of unknown origin, with no underlying data | Dropped |
+| Eleven book covers and the cover of a Korean textbook | Publishers' works | Entries in the further reading and the bibliography |
 
-## 재현 방법
+## How to reproduce them
 
-리포지토리 루트에서 실행한다(그림은 `figures/` 에 PDF 로 고정되어 커밋되므로, 평소에는 실행할
-필요가 없다).
+Run from the root of the repository. The figures are frozen as PDF in
+`figures/` and committed, so there is normally no need to run this.
 
 ```sh
-python pyfig/mkfig_data.py      # 자료 기반 그림
-python pyfig/mkfig_schema.py    # 개념 도해
-python pyfig/mkfig_extra.py     # 본문을 위해 새로 고안한 그림
+python pyfig/mkfig_data.py      # the figures drawn from data
+python pyfig/mkfig_schema.py    # the conceptual diagrams
+python pyfig/mkfig_extra.py     # the figures devised for the text
 Rscript -e "source('R/_freeze.R'); freeze('qdm-xyz', seed=1, fig=TRUE, fig.w=7.0, fig.h=2.6)"
 ```
 
-- 필요 환경: Python 3 + matplotlib, 한글 글꼴 **KoPubWorldDotum Medium**(본문 글꼴과 짝).
-  다른 환경에서는 `mkfig_common.py` 의 `rcParams["font.family"]` 를 바꾼다.
-- `mkfig_common.py` 의 `NAME_MAP` 이 원 발표자료의 그림 이름을 책의 파일 이름
-  (`ov-*` = 1장, `qdm-*` = 2장)으로 옮긴다. 맵에 없는 이름으로 저장하려 하면 예외를 던져
-  조용한 누락을 막는다.
-- PDF 는 `pdf.fonttype = 42` 로 글꼴을 서브셋 내장한다(본문 검색·복사 가능).
-- 2도(검정+네이비) 인쇄 모드(`\ifPrintMode`)는 TikZ 색만 재배정하므로, 이 그림들의 색
-  (남색 `#1f4e79`·주황갈색 `#b45309`·회색)은 그대로 인쇄된다. 세 색은 명도 차이를 두어
-  흑백 인쇄에서도 구분된다.
+- What you need: Python 3 with matplotlib, and the **Arial** face (the face of
+  the figures of this edition). On another system, change
+  `rcParams["font.family"]` in `mkfig_common.py`.
+- The scripts carry the labels of the Korean edition and translate them through
+  the dictionary in `labels_en.py` as each label is created. `CTDA_LANG` selects
+  the language and defaults to `en` here; `mkfig_common.save()` raises if a
+  label is missing from the dictionary, so no Korean label can slip through.
+- `NAME_MAP` in `mkfig_common.py` maps the figure names of the original lecture
+  to the file names of the book (`ov-*` for chapter 1, `qdm-*` for chapter 2).
+  Saving under a name that is not in the map raises, which prevents a figure
+  from going missing quietly.
+- The PDFs embed a subset of the font with `pdf.fonttype = 42`, so the text can
+  be searched and copied.
+- The two-color (black and navy) print mode of the book reassigns TikZ colors
+  only, so the colors of these figures (navy `#1f4e79`, orange-brown `#b45309`,
+  gray) print as they are. The three differ in lightness, so they stay apart in
+  black and white.

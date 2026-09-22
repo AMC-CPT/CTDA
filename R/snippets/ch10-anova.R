@@ -1,6 +1,6 @@
-SST <- sum((y - mean(y))^2)                   # 총변동 (corrected)
-SSE <- sum((y - yhat)^2)                      # 오차제곱합
-SSR <- SST - SSE                              # 회귀제곱합
+SST <- sum((y - mean(y))^2)                   # total variation (corrected)
+SSE <- sum((y - yhat)^2)                      # error sum of squares
+SSR <- SST - SSE                              # regression sum of squares
 Rsq <- SSR / SST;  Rsq                        # R-square
 n <- length(y);  p <- length(b)
 R2adj <- 1 - (1 - Rsq) * (n - 1) / (n - p);  R2adj   # adjusted R-square
@@ -14,4 +14,4 @@ r3 <- cbind(SS, DF, MS, c(Fval, NA, NA), c(Fcrit, NA, NA), c(pval, NA, NA))
 rownames(r3) <- c("Regression", "Error", "Total")
 colnames(r3) <- c("Sum Sq", "Df", "Mean Sq", "F value", "F crit", "Pr(>F)")
 class(r3) <- "anova"
-r3                                            # anova(r2), summary(r2) 와 비교
+r3                                            # compare with anova(r2), summary(r2)

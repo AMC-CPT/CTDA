@@ -1,7 +1,7 @@
 library(MASS)
 Mu0 <- c(1, 2, 3)
 Cov0 <- matrix(c(1, 0.7, -0.1, 0.7, 1, 0.5, -0.1, 0.5, 1), nrow = 3)
-chol(Cov0)   # 양정치 행렬인지 확인
+chol(Cov0)   # check positive definiteness
 
 n <- 300
 d1 <- mvrnorm(n, Mu0, Cov0)
