@@ -1,4 +1,4 @@
-# 임상시험에서의 과학적 추론 with R — 예제 저장소
+# 임상시험에서의 과학적 추론 with R: 예제 저장소
 
 *An English description is in [README.md](README.md).*
 
@@ -25,22 +25,54 @@ Rscript R/build-all.R
 돌리지 않고 그대로 읽어도 된다. 한 장만 보려면 `R/snippets/` 에서 그 장의 파일을 열어
 직접 실행한다.
 
-얼리는 일은 `R/build.R` 이 하고 `R/build-all.R` 은 그것을 부른다. 다른 점은 17장
-하나로, 17장의 비선형 적합은 그룹마다 새 R 프로세스가 필요하다(까닭은
+얼리는 일은 `R/build.R` 이 하고 `R/build-all.R` 은 그것을 부른다. 다른 점은 `ch17-*`
+스니펫(책의 20장) 하나로, 그 비선형 적합은 그룹마다 새 R 프로세스가 필요하다(까닭은
 `R/build-all.R` 머리 주석에 있다). 한 장만 다시 만들 때는 `R/build.R` 을 쓴다.
 
 ## 구조
 
 ```
-R/snippets/chNN-*.R   본문에 실리는 R 코드의 원본 (장 번호 = 책의 장). 401개
+R/snippets/<name>.R   본문에 실리는 R 코드의 원본. 401개
 R/build.R             snippets 를 차례로 돌려 output/ 과 figures/ 를 만든다
-R/build-all.R         같은 일을 하되 17장은 그룹마다 새 R 프로세스로 돌린다
+R/build-all.R         같은 일을 하되 ch17-* 스니펫은 그룹마다 새 R 프로세스로 돌린다
 R/_freeze.R           그 도우미 (seed 고정, 세션 공유, 출력 정리)
 output/<name>.txt     얼린 콘솔 출력 (책에 실린 그대로). 339개
 figures/<name>.pdf    얼린 그림. 91개
 data/                 실습 자료
 pyfig/                1·2장 도해의 matplotlib 스크립트와 FIGURE-PROVENANCE.md
 ```
+
+스니펫 이름의 번호는 인쇄된 책의 장 번호가 **아니다.** 이름은 원고 파일의 번호를 따르며,
+그 번호는 장을 더하고 옮길 때 바뀌지 않았다. 책이 스니펫을 이 이름으로 부르므로 그대로
+둔다. 파일 묶음마다 책의 몇 장에 실리는지는 다음과 같다.
+
+| 파일 | 책의 장 |
+|---|---|
+| `qdm-*` | 1, 2 |
+| `ch02-*` | 3 |
+| `ch03-*` | 4 |
+| `ch04-*` | 5 |
+| `ch05-*` | 6 |
+| `ch06-*` | 7 |
+| `ch07-*` | 8 |
+| `ch08-*` | 6, 7, 11, 18 (옛 장 하나의 절들이 흩어진 것) |
+| `ch09-*` | 10 |
+| `ch10-*` | 11 |
+| `ch11-*` | 12 |
+| `ch12-*` | 13 |
+| `ch13-*` | 14 |
+| `ch14-*` | 15 |
+| `ch15-*` | 16 |
+| `ch16-*`, `ch16b-*` | 17 |
+| `ss-*` | 18 |
+| `ctsim-*` | 19 |
+| `ch17-*` | 20 |
+| `be-*` | 21 |
+| `appA-*` ~ `appE-*` | 부록 A ~ E |
+
+9·22·23장은 코드를 본문에 직접 싣고 24장에는 코드가 없어 여기에 파일이 없다.
+`R/build.R` 과 `R/build-all.R` 의 주석도 파일과 같은 번호로 장을 부른다. 그 주석의
+17장은 `ch17-*` 파일, 곧 책의 20장이다.
 
 `pyfig/` 의 스크립트는 한국어판의 것이며, 라벨을 그릴 때마다 `pyfig/labels_en.py` 의
 사전으로 옮긴다. 그래서 그 파일들의 주석만 한글로 남아 있다. `CTDA_LANG` 이 언어를
@@ -64,10 +96,11 @@ base R 로 도는 것이 대부분이고, 장에 따라 다음이 필요하다.
 ```r
 install.packages(c("sasLM", "MASS", "survival", "nlme", "lattice", "psych", "nnet",
                    "car", "gmodels", "PropCIs", "KMsurv", "ggplot2", "ggsurvfit",
-                   "dobson", "rgl"))
+                   "dobson", "rgl", "mathr", "flexsurv", "numDeriv", "wnl", "nmw",
+                   "deSolve", "LBI", "vcdExtra", "meta"))
 ```
 
-`mathr` 은 CRAN 에 없다. <https://github.com/ksbae/mathr> 에서 설치한다.
+`mathr` 도 CRAN 에 있다. 개발판은 <https://github.com/ksbae/mathr> 에 있다.
 
 ## 자료의 출처
 
@@ -105,7 +138,7 @@ version. It is distributed WITHOUT ANY WARRANTY; see `LICENSE` for details.
 
 ## 같은 시리즈의 다른 companion 저장소
 
-- 1권 『과학 계산 with R』 — <https://github.com/AMC-CPT/SciCompR>
-- 3권 『약동학 with R』 — <https://github.com/AMC-CPT/PKwR>
-- 4권 『계량약리학 with NONMEM and R』 — <https://github.com/AMC-CPT/PMx>
-- 5권 『신약임상개발』 — <https://github.com/AMC-CPT/CDD>
+- 1권 『과학 계산 with R』: <https://github.com/AMC-CPT/SciCompR>
+- 3권 『약동학 with R』: <https://github.com/AMC-CPT/PKwR>
+- 4권 『계량약리학 with NONMEM and R』: <https://github.com/AMC-CPT/PMx>
+- 5권 『신약임상개발』: <https://github.com/AMC-CPT/CDD>

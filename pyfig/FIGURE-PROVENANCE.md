@@ -8,12 +8,12 @@ in the author's original lecture material (the DIA conference talk of
 
 ## Classes
 
-- **A. Redrawn from data** — drawn directly from public statistics or from the
+- **A. Redrawn from data**: drawn directly from public statistics or from the
   author's own data.
-- **B. The concept drawn anew** — the third-party illustration the original
+- **B. The concept drawn anew**: the third-party illustration the original
   lecture quoted is not used; the drawing was designed and made from scratch
   **from the facts and the concept it conveyed**, and from nothing else.
-- **C. Newly devised for the text** — not in the original lecture material,
+- **C. Newly devised for the text**: not in the original lecture material,
   made because the argument of the text needed it.
 
 ## The list

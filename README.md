@@ -1,4 +1,4 @@
-# Scientific Inference in Clinical Trials with R — example repository
+# Scientific Inference in Clinical Trials with R: example repository
 
 *한국어 설명은 [README.ko.md](README.ko.md) 에 있습니다.*
 
@@ -31,22 +31,56 @@ anything. To follow one chapter, open that chapter's files in `R/snippets/` and
 run them yourself.
 
 `R/build.R` is what does the freezing and `R/build-all.R` drives it. The
-difference is chapter 17, whose many nonlinear fits need one R process per
-group; the comment at the head of `R/build-all.R` says why. To remake a single
-chapter, run `R/build.R`.
+difference is the `ch17-*` snippets (chapter 20 of the book), whose many
+nonlinear fits need one R process per group; the comment at the head of
+`R/build-all.R` says why. To remake a single chapter, run `R/build.R`.
 
 ## Structure
 
 ```
-R/snippets/chNN-*.R   the R code printed in the book (chapter number = the book's). 401 files
+R/snippets/<name>.R   the R code printed in the book. 401 files
 R/build.R             runs the snippets in order and makes output/ and figures/
-R/build-all.R         the same, with chapter 17 run one group per R process
+R/build-all.R         the same, with the ch17-* snippets run one group per R process
 R/_freeze.R           its helper (fixes the seed, shares the session, tidies the output)
 output/<name>.txt     frozen console output, as printed in the book. 339 files
 figures/<name>.pdf    frozen figures. 91 files
 data/                 the example data
 pyfig/                the matplotlib scripts of the Ch 1-2 diagrams, and FIGURE-PROVENANCE.md
 ```
+
+The number in a snippet's name is **not** the chapter number of the printed
+book. The names keep the numbering of the manuscript's files, which did not
+change when chapters were added and moved, and the book refers to the snippets
+by these names. The chapters of the book that each group of files belongs to:
+
+| Files | Chapter of the book |
+|---|---|
+| `qdm-*` | 1, 2 |
+| `ch02-*` | 3 |
+| `ch03-*` | 4 |
+| `ch04-*` | 5 |
+| `ch05-*` | 6 |
+| `ch06-*` | 7 |
+| `ch07-*` | 8 |
+| `ch08-*` | 6, 7, 11, 18 (the sections of a former chapter, now spread out) |
+| `ch09-*` | 10 |
+| `ch10-*` | 11 |
+| `ch11-*` | 12 |
+| `ch12-*` | 13 |
+| `ch13-*` | 14 |
+| `ch14-*` | 15 |
+| `ch15-*` | 16 |
+| `ch16-*`, `ch16b-*` | 17 |
+| `ss-*` | 18 |
+| `ctsim-*` | 19 |
+| `ch17-*` | 20 |
+| `be-*` | 21 |
+| `appA-*` to `appE-*` | Appendices A to E |
+
+Chapters 9, 22 and 23 print their code in the text itself and chapter 24 has
+none, so there are no files for them here. The comments of `R/build.R` and
+`R/build-all.R` number chapters the same way as the files: their chapter 17 is
+the `ch17-*` files, chapter 20 of the book.
 
 The scripts in `pyfig/` are the ones the Korean edition uses; they carry its
 labels and translate them through `pyfig/labels_en.py` as each label is drawn,
@@ -65,7 +99,7 @@ manages the random seed and the session.
 The snippets run in order, **as though one R session ran through them all**: a
 later snippet uses the objects an earlier one made. So running one file on its
 own can fail with an object-not-found error. When that happens, run the
-chapter's earlier snippets first — the order in `R/build.R` is that order.
+chapter's earlier snippets first; the order in `R/build.R` is that order.
 
 ## R packages
 
@@ -74,10 +108,12 @@ Most of it runs on base R; some chapters need these.
 ```r
 install.packages(c("sasLM", "MASS", "survival", "nlme", "lattice", "psych", "nnet",
                    "car", "gmodels", "PropCIs", "KMsurv", "ggplot2", "ggsurvfit",
-                   "dobson", "rgl"))
+                   "dobson", "rgl", "mathr", "flexsurv", "numDeriv", "wnl", "nmw",
+                   "deSolve", "LBI", "vcdExtra", "meta"))
 ```
 
-`mathr` is not on CRAN; install it from <https://github.com/ksbae/mathr>.
+`mathr` is on CRAN as well; its development version is at
+<https://github.com/ksbae/mathr>.
 
 ## Where the data come from
 
