@@ -1,5 +1,5 @@
 # =====================================================================
-#  R/build.R  —  regenerate all frozen R output and figures
+#  R/build.R  -  regenerate all frozen R output and figures
 #  Run from the repository root:   Rscript R/build.R
 #  Add one freeze(...) line per snippet as chapters are written.
 # =====================================================================
@@ -305,7 +305,7 @@ freeze("ch15-dx",    fig = TRUE, fig.w = 6.2, fig.h = 3.4)   # diagnostics
 ##  Only the FO pipeline is executed (fast, deterministic).  FOCE (~2min)
 ##  and LAPL (~4min) plus the transform helpers are shown illustratively
 ##  (ch16-foce/-lapl/-transform/-objeta/-scalevar/-desclvar/-nmctl are NOT
-##  frozen — displayed as code only via \rcode).
+##  frozen; displayed as code only via \rcode).
 new_session()
 freeze("ch16-lattice", fig = TRUE, fig.w = 6.4, fig.h = 5.0)  # require(lattice)
 freeze("ch16-init-prep")                          # deriv FGD/H, PRED (session state)
@@ -395,7 +395,7 @@ freeze("ch17-doseres-fit",  width = 84, trim = c("Cov", "run", "Prediction", "Re
 freeze("ch17-doseres-prof", fig = TRUE, fig.w = 5.0, fig.h = 4.6)
 freeze("ch17-doseres-dx",   fig = TRUE, fig.w = 6.2, fig.h = 3.4)
 
-## G7: conc-effect covariate (wnl) — SPLIT into <=3 fits/process to avoid
+## G7: conc-effect covariate (wnl) - SPLIT into <=3 fits/process to avoid
 ##     segfaults.  require(wnl) must be loaded before the fit snippets that
 ##     lack it (ch17-ce-full/-err); load it in the driver, e.g.
 ##     source("R/_freeze.R"); suppressMessages(require(wnl)); new_session()

@@ -1,5 +1,5 @@
 # =====================================================================
-#  R/_freeze.R  —  helper to freeze R console output and figures
+#  R/_freeze.R  -  helper to freeze R console output and figures
 #
 #  freeze(name, seed, fig, fig.w, fig.h)
 #    - sources R/snippets/<name>.R with a fixed seed
