@@ -294,6 +294,8 @@ freeze("ch14-creml-varcov",  digits = 5)
 ## ---- Chapter 15: Nonlinear Regression (wnl) ----------------------------------
 ##  NOTE: this R install intermittently segfaults on trivial ops; if the
 ##  freeze dies mid-chapter, just re-run (the fit is deterministic).
+##  Frozen with wnl 0.8.6 (2026-09-28): wnl 0.8.5 printed a $Residual that is
+##  not DV - Prediction, and its likelihood intervals differ in the 5th-6th digit.
 new_session()
 freeze("ch15-data",  fig = TRUE, fig.w = 5.2, fig.h = 3.4)   # require(wnl)
 freeze("ch15-pcomp", fig = TRUE, fig.w = 4.2, fig.h = 3.2)   # wnl::pComp diagram
@@ -340,7 +342,8 @@ freeze("ch16b-focei-obj1",  width = 84)           # OBJ1 + the fit (~2.5 min)
 ##  run in ONE process (memory-fragile).  For a clean regeneration, run
 ##  each new_session() group below as a SEPARATE Rscript invocation
 ##  (with a retry loop), not the whole build.R in one process.
-##  Data (r.acr.kr/MFDS) vendored to data/.  wnl 0.8.5, nmw 0.3.1.
+##  Data (r.acr.kr/MFDS) vendored to data/.  wnl 0.8.5, nmw 0.3.1; groups G6
+##  (doseres) and G7 (ce) re-frozen with wnl 0.8.6 on 2026-09-28 (see chapter 15).
 new_session()                                      # G1: logistic + Cochran-Armitage
 freeze("ch17-logit-dose")
 freeze("ch17-logit-dose-plot",   fig = TRUE, fig.w = 5.0, fig.h = 3.4)
